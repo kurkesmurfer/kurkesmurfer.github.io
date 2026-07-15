@@ -134,7 +134,7 @@ a:hover {
 
 .hero {
   position: relative;
-  min-height: min(720px, calc(100vh - 68px));
+  min-height: min(600px, calc(100vh - 68px));
   overflow: hidden;
   border-bottom: 1px solid var(--line-soft);
   background: #141719;
@@ -155,27 +155,27 @@ a:hover {
   z-index: 3;
   width: min(calc(100% - 32px), var(--max));
   margin: 0 auto;
-  padding: clamp(72px, 11vh, 120px) 0 240px;
+  padding: clamp(72px, 10vh, 96px) 0 180px;
 }
 
 .hero-copy h1,
 .product-copy h1 {
-  max-width: 760px;
+  max-width: 460px;
   margin: 0;
   font-family: "Fraunces", Georgia, serif;
-  font-size: clamp(52px, 10vw, 108px);
-  line-height: 0.94;
+  font-size: clamp(54px, 5.2vw, 68px);
+  line-height: 1;
   font-weight: 600;
   letter-spacing: 0;
 }
 
 .hero-copy p,
 .product-copy p {
-  max-width: 610px;
-  margin: 24px 0 0;
+  max-width: 410px;
+  margin: 20px 0 0;
   color: var(--paper-muted);
-  font-size: clamp(21px, 2.5vw, 30px);
-  line-height: 1.25;
+  font-size: 23px;
+  line-height: 1.3;
 }
 
 .eyebrow {
@@ -192,7 +192,7 @@ a:hover {
   right: max(16px, calc((100vw - var(--max)) / 2));
   bottom: 0;
   left: max(16px, calc((100vw - var(--max)) / 2));
-  height: min(58vh, 470px);
+  height: 410px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
@@ -203,7 +203,7 @@ a:hover {
 .rack-scene img {
   flex: 0 0 auto;
   width: auto;
-  height: min(56vh, 450px);
+  height: 390px;
   filter: drop-shadow(0 14px 20px rgba(0, 0, 0, 0.5));
 }
 
@@ -374,7 +374,7 @@ a:hover {
 
 .product-hero {
   position: relative;
-  min-height: min(640px, calc(100vh - 68px));
+  min-height: min(600px, calc(100vh - 68px));
   overflow: hidden;
   border-bottom: 1px solid var(--line-soft);
   background: #141719;
@@ -385,11 +385,11 @@ a:hover {
   z-index: 3;
   width: min(calc(100% - 32px), var(--max));
   margin: 0 auto;
-  padding: clamp(66px, 10vh, 110px) 0 240px;
+  padding: clamp(72px, 10vh, 96px) 0 180px;
 }
 
 .product-copy h1 {
-  font-size: clamp(58px, 10vw, 104px);
+  font-size: clamp(56px, 5.4vw, 70px);
 }
 
 .architecture {
@@ -527,6 +527,30 @@ a:hover {
   gap: 24px;
 }
 
+@media (max-width: 1180px) {
+  .hero,
+  .product-hero {
+    min-height: 700px;
+  }
+
+  .hero-copy,
+  .product-copy {
+    padding-top: 64px;
+    padding-bottom: 330px;
+  }
+
+  .rack-scene {
+    right: 16px;
+    left: 16px;
+    height: 320px;
+    justify-content: center;
+  }
+
+  .rack-scene img {
+    height: 300px;
+  }
+}
+
 @media (max-width: 900px) {
   .module-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -571,33 +595,26 @@ a:hover {
 
   .hero,
   .product-hero {
-    min-height: 670px;
+    min-height: 620px;
   }
 
   .hero-copy,
   .product-copy {
-    padding-top: 64px;
-    padding-bottom: 330px;
+    padding-top: 48px;
+    padding-bottom: 260px;
   }
 
   .hero-copy h1,
   .product-copy h1 {
-    font-size: 54px;
+    font-size: 44px;
   }
 
   .rack-scene {
-    right: 0;
-    left: 0;
-    height: 318px;
-    justify-content: center;
+    height: 240px;
   }
 
   .rack-scene img {
-    height: 300px;
-  }
-
-  .rack-scene .glue {
-    display: none;
+    height: min(220px, 52vw);
   }
 
   .band {
