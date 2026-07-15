@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stage4 — SpaceTime Manual</title>
+  <meta name="description" content="SpaceTime Stage4 module manual: voltage sliders, interval sliders, external-source selection, stage programming, and playhead feedback.">
+  <link rel="icon" href="/assets/kurkesmurfer-logo.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <header class="site-header"><div class="header-inner"><a class="brand-link" href="/"><img src="/assets/kurkesmurfer-logo.svg" alt=""><span>Kurkesmurfer</span></a><nav class="site-nav" aria-label="Primary navigation"><a href="/">Collection</a><a href="/spacetime/">SpaceTime</a><a href="/spacetime/manual/" aria-current="page">Manual</a></nav></div></header>
+  <main class="manual-layout">
+    <nav class="manual-nav" aria-label="SpaceTime manual"><h2>SpaceTime manual</h2><a href="/spacetime/manual/">Overview</a><a href="/spacetime/manual/program.html">Program</a><a href="/spacetime/manual/stage4.html" aria-current="page">Stage4</a><a href="/spacetime/manual/head.html">Head</a><a href="/spacetime/manual/midi.html">MIDI</a><a href="/spacetime/manual/glue-left.html">Glue Left</a><a href="/spacetime/manual/glue-right.html">Glue Right</a></nav>
+    <article class="manual-article">
+      <img class="manual-shot" src="/assets/modules/stage4.png" alt="SpaceTime Stage4 module">
+      <p class="eyebrow">10 HP four-stage block</p>
+      <h1>Stage4</h1>
+      <p class="intro">Stage4 contributes four stages to the shared programming field. Add one to eight blocks directly to the right of Program.</p>
+
+      <h2>Sliders</h2>
+      <table><thead><tr><th>Row</th><th>Internal use</th><th>External-source use</th></tr></thead><tbody>
+        <tr><td>Output Voltage</td><td>Sets the stage voltage before Program's range, slew, and quantization modifiers.</td><td>Selects external Program input A, B, C, or D by quartile.</td></tr>
+        <tr><td>Interval Time</td><td>Sets a normalized position inside the stage's selected time range.</td><td>Selects external Program input A, B, C, or D by quartile.</td></tr>
+      </tbody></table>
+      <p>The A–D letters beside each travel indicate the quartile mapping. Stage numbering continues left to right across adjacent blocks.</p>
+
+      <h2>Feedback cluster</h2>
+      <p>Each stage has a light cluster that shows the current edit selection and the positions of up to eight heads. Head colors are assigned nearest-first from Program: red, green, blue, yellow, magenta, cyan, orange, and white. A stopped head is dimmed.</p>
+
+      <h2>Ownership and reordering</h2>
+      <p>A Stage4 block owns both its slider values and its four stages of programming. Moving a block moves that four-stage phrase intact. Removing or inserting blocks changes the active stage count immediately.</p>
+      <div class="callout">A physical gap or foreign module truncates the normal expander chain. Use a matched Glue Right and Glue Left pair when the block must live elsewhere in the rack.</div>
+
+      <h2>Preset takeover</h2>
+      <p>After Program recalls a preset, saved slider values become active even if the visible handles are elsewhere. Move a handle toward the active value; it takes control only after crossing that value. MIDI can either preserve this takeover behavior or move the visible handles, selected in the MIDI context menu.</p>
+
+      <h2>Limits</h2>
+      <ul>
+        <li>One block adds four stages.</li>
+        <li>Eight reachable blocks provide the maximum 32 stages.</li>
+        <li>Stage4 has no independent outputs; heads render the shared field.</li>
+        <li>Its context menu contains diagnostics only.</li>
+      </ul>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><a href="/spacetime/manual/program.html">Previous: Program</a><a href="/spacetime/manual/head.html">Next: Head</a></div></footer>
+</body>
+</html>
+

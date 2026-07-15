@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glue Left — SpaceTime Manual</title>
+  <meta name="description" content="SpaceTime Glue Left manual: receiving endpoint for the SpaceTime virtual expander bridge.">
+  <link rel="icon" href="/assets/kurkesmurfer-logo.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <header class="site-header"><div class="header-inner"><a class="brand-link" href="/"><img src="/assets/kurkesmurfer-logo.svg" alt=""><span>Kurkesmurfer</span></a><nav class="site-nav" aria-label="Primary navigation"><a href="/">Collection</a><a href="/spacetime/">SpaceTime</a><a href="/spacetime/manual/" aria-current="page">Manual</a></nav></div></header>
+  <main class="manual-layout">
+    <nav class="manual-nav" aria-label="SpaceTime manual"><h2>SpaceTime manual</h2><a href="/spacetime/manual/">Overview</a><a href="/spacetime/manual/program.html">Program</a><a href="/spacetime/manual/stage4.html">Stage4</a><a href="/spacetime/manual/head.html">Head</a><a href="/spacetime/manual/midi.html">MIDI</a><a href="/spacetime/manual/glue-left.html" aria-current="page">Glue Left</a><a href="/spacetime/manual/glue-right.html">Glue Right</a></nav>
+    <article class="manual-article">
+      <img class="manual-shot" src="/assets/modules/glue-left.png" alt="SpaceTime Glue Left module">
+      <p class="eyebrow">2 HP virtual bridge endpoint</p>
+      <h1>Glue Left</h1>
+      <p class="intro">Glue Left begins the right-hand fragment of a separated SpaceTime chain. Pair it with Glue Right on the same link number.</p>
+      <h2>Placement</h2>
+      <p>Place Glue Left immediately to the left of the remote fragment. It can continue either a head-side or stage-side cut:</p>
+      <div class="architecture"><span>Glue Left</span><b>→</b><span>MIDI / Program / Stage4</span></div>
+      <h2>Link and readout</h2>
+      <p>Choose Link 1–8 in the context menu. The readout combines the link number with <strong>H</strong> for a head-side fragment, <strong>S</strong> for a stage-side fragment, or a dash when no side is detected.</p>
+      <table><thead><tr><th>Light</th><th>Meaning</th></tr></thead><tbody>
+        <tr><td>Green</td><td>A unique, compatible partner is linked.</td></tr>
+        <tr><td>Red</td><td>Waiting, mismatched, reversed, or duplicated link.</td></tr>
+        <tr><td>Off</td><td>No valid SpaceTime neighbor.</td></tr>
+      </tbody></table>
+      <h2>Scope</h2>
+      <p>The pair transports only SpaceTime's internal expander messages inside one VCV Rack patch. It is not a cableless audio/CV connection and is not compatible with third-party expanders.</p>
+      <p>The context menu also reports detected side, link status, and queue drops for diagnosis.</p>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><a href="/spacetime/manual/midi.html">Previous: MIDI</a><a href="/spacetime/manual/glue-right.html">Next: Glue Right</a></div></footer>
+</body>
+</html>
+

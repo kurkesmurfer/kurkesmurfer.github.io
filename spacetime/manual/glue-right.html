@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glue Right — SpaceTime Manual</title>
+  <meta name="description" content="SpaceTime Glue Right manual: sending endpoint for the SpaceTime virtual expander bridge.">
+  <link rel="icon" href="/assets/kurkesmurfer-logo.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <header class="site-header"><div class="header-inner"><a class="brand-link" href="/"><img src="/assets/kurkesmurfer-logo.svg" alt=""><span>Kurkesmurfer</span></a><nav class="site-nav" aria-label="Primary navigation"><a href="/">Collection</a><a href="/spacetime/">SpaceTime</a><a href="/spacetime/manual/" aria-current="page">Manual</a></nav></div></header>
+  <main class="manual-layout">
+    <nav class="manual-nav" aria-label="SpaceTime manual"><h2>SpaceTime manual</h2><a href="/spacetime/manual/">Overview</a><a href="/spacetime/manual/program.html">Program</a><a href="/spacetime/manual/stage4.html">Stage4</a><a href="/spacetime/manual/head.html">Head</a><a href="/spacetime/manual/midi.html">MIDI</a><a href="/spacetime/manual/glue-left.html">Glue Left</a><a href="/spacetime/manual/glue-right.html" aria-current="page">Glue Right</a></nav>
+    <article class="manual-article">
+      <img class="manual-shot" src="/assets/modules/glue-right.png" alt="SpaceTime Glue Right module">
+      <p class="eyebrow">2 HP virtual bridge endpoint</p>
+      <h1>Glue Right</h1>
+      <p class="intro">Glue Right terminates the left-hand fragment of a separated SpaceTime chain. Pair it with Glue Left on the same link number.</p>
+      <h2>Placement</h2>
+      <p>Place Glue Right immediately to the right of the fragment being continued elsewhere:</p>
+      <div class="architecture"><span>Head / Program / Stage4</span><b>→</b><span>Glue Right</span></div>
+      <p>A valid pair preserves normal stage and head numbering across the gap. It can split a chain between heads, between MIDI and Program, or between Stage4 blocks.</p>
+      <h2>Link and readout</h2>
+      <p>Select Link 1–8 from the context menu and choose the same number on the matching Glue Left. The readout shows the link and detected side.</p>
+      <table><thead><tr><th>Light</th><th>Meaning</th></tr></thead><tbody>
+        <tr><td>Green</td><td>Paired, unique, and compatible.</td></tr>
+        <tr><td>Red</td><td>Waiting, mismatched, reversed, or duplicated.</td></tr>
+        <tr><td>Off</td><td>No valid SpaceTime neighbor.</td></tr>
+      </tbody></table>
+      <h2>Failure behavior</h2>
+      <p>A duplicate endpoint or mismatched pair fails closed instead of connecting to an arbitrary fragment. The normal chain then becomes invalid or truncated, making the error visible on Program.</p>
+      <h2>Scope</h2>
+      <p>Glue is specific to SpaceTime and one Rack patch. It does not transport audio or CV and does not make generic VCV expanders wireless.</p>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><a href="/spacetime/manual/glue-left.html">Previous: Glue Left</a><a href="/spacetime/manual/">Manual overview</a></div></footer>
+</body>
+</html>

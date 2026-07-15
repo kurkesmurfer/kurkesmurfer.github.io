@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Program — SpaceTime Manual</title>
+  <meta name="description" content="SpaceTime Program module manual: stage editing, voltage and time modifiers, modes, presets, scale, external inputs, and poly output.">
+  <link rel="icon" href="/assets/kurkesmurfer-logo.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <header class="site-header"><div class="header-inner"><a class="brand-link" href="/"><img src="/assets/kurkesmurfer-logo.svg" alt=""><span>Kurkesmurfer</span></a><nav class="site-nav" aria-label="Primary navigation"><a href="/">Collection</a><a href="/spacetime/">SpaceTime</a><a href="/spacetime/manual/" aria-current="page">Manual</a></nav></div></header>
+  <main class="manual-layout">
+    <nav class="manual-nav" aria-label="SpaceTime manual"><h2>SpaceTime manual</h2><a href="/spacetime/manual/">Overview</a><a href="/spacetime/manual/program.html" aria-current="page">Program</a><a href="/spacetime/manual/stage4.html">Stage4</a><a href="/spacetime/manual/head.html">Head</a><a href="/spacetime/manual/midi.html">MIDI</a><a href="/spacetime/manual/glue-left.html">Glue Left</a><a href="/spacetime/manual/glue-right.html">Glue Right</a></nav>
+    <article class="manual-article">
+      <img class="manual-shot" src="/assets/modules/program.png" alt="SpaceTime Program module">
+      <p class="eyebrow">18 HP programming anchor</p>
+      <h1>Program</h1>
+      <p class="intro">Program selects stages, changes their behavior, stores presets, receives four external sources, and collects every head's CV into one polyphonic output.</p>
+
+      <h2>Selection and bulk editing</h2>
+      <table><thead><tr><th>Control</th><th>Behavior</th></tr></thead><tbody>
+        <tr><td>Select</td><td>Move the edit selection left or right. Hold to autoscroll; selection wraps across the reachable stage chain.</td></tr>
+        <tr><td>Stage display</td><td>Shows the reachable stage count. An exclamation mark indicates a truncated or invalid chain. <strong>AL</strong> means the next gesture will edit all stages.</td></tr>
+        <tr><td>Clear</td><td>Reset all stage programming to defaults without moving voltage or time sliders.</td></tr>
+      </tbody></table>
+      <p>Hold Select while applying a modifier to edit every stage. For mouse use, choose <strong>Apply next edit to ALL stages</strong> from the context menu.</p>
+
+      <h2>Output voltage</h2>
+      <table><thead><tr><th>Control</th><th>Down / remove</th><th>Up / add</th></tr></thead><tbody>
+        <tr><td>Quant</td><td>Continuous voltage</td><td>Quantize to the selected key and scale at 1 V/oct</td></tr>
+        <tr><td>Slope</td><td>Reduce slew level</td><td>Add slew level, up to level 2</td></tr>
+        <tr><td>Range</td><td>Half, 0–5 V</td><td>Full, 0–10 V</td></tr>
+        <tr><td>Source</td><td>Stage voltage slider</td><td>External A–D; slider quartile chooses the input</td></tr>
+      </tbody></table>
+      <p>The five Limited buttons select a 2 V slider span with octave offset −2 through +2. Limited is independent of the Full/Half range selection.</p>
+
+      <h2>Operating mode</h2>
+      <table><thead><tr><th>Modifier</th><th>Effect when set</th></tr></thead><tbody>
+        <tr><td>Stop</td><td>The head completes this interval and stops. A new Start continues at the following stage.</td></tr>
+        <tr><td>Sustain</td><td>The head holds this stage while its Start input remains high.</td></tr>
+        <tr><td>Enable</td><td>The head waits on entry until its Start input exceeds 5 V.</td></tr>
+        <tr><td>First / Last</td><td>Mark region boundaries used by Head's First–Last loop mode.</td></tr>
+      </tbody></table>
+
+      <h2>Interval time and pulses</h2>
+      <p>Choose one of four ranges per stage: 0.002–0.03 s, 0.02–0.3 s, 0.2–3 s, or 2–30 s. Time Source selects the Stage4 time slider or one of external inputs A–D; in external mode the time slider chooses the input quartile.</p>
+      <p>Pulse 1 and Pulse 2 flag the selected stage for the corresponding Head outputs. Pulse Retrig defaults on, inserting a brief low notch between adjacent flagged stages. Turn it off to merge adjacent stages into one gate.</p>
+
+      <h2>Presets, key, and scale</h2>
+      <p>For presets, press Load or Save and then 1–12. Presets store stage programming and slider values in the patch. Recalled slider values use takeover: a physical slider does not regain control until it crosses the stored value.</p>
+      <p>Press Key and then 1–12 for C through B. Press Scale and then 10, 11, or 12 for Major, Minor, or Chromatic.</p>
+
+      <h2>Connections</h2>
+      <table><thead><tr><th>Port</th><th>Purpose</th></tr></thead><tbody>
+        <tr><td>A–D</td><td>Four external CV sources shared by stage voltage and interval-time routing.</td></tr>
+        <tr><td>Poly Out</td><td>Every reachable head's CV; channel 1 is Head 1 nearest Program.</td></tr>
+      </tbody></table>
+
+      <h2>Context menu</h2>
+      <ul>
+        <li>Arm one-shot all-stage editing.</li>
+        <li>Choose slew level 1 from 10%, 25%, or 40% of the interval.</li>
+        <li>Choose slew level 2 from 50%, 75%, or 100% of the interval.</li>
+        <li>Choose self-normalizing 0–10 V address scaling or fixed 0.5 V per stage.</li>
+        <li>Slope law is currently Linear; Exponential is reserved.</li>
+      </ul>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><a href="/spacetime/manual/">Manual overview</a><a href="/spacetime/manual/stage4.html">Next: Stage4</a></div></footer>
+</body>
+</html>
+

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Head — SpaceTime Manual</title>
+  <meta name="description" content="SpaceTime Head module manual: transport, addressing, direction, four clock sources, loop modes, timing CV, and function-generator outputs.">
+  <link rel="icon" href="/assets/kurkesmurfer-logo.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <header class="site-header"><div class="header-inner"><a class="brand-link" href="/"><img src="/assets/kurkesmurfer-logo.svg" alt=""><span>Kurkesmurfer</span></a><nav class="site-nav" aria-label="Primary navigation"><a href="/">Collection</a><a href="/spacetime/">SpaceTime</a><a href="/spacetime/manual/" aria-current="page">Manual</a></nav></div></header>
+  <main class="manual-layout">
+    <nav class="manual-nav" aria-label="SpaceTime manual"><h2>SpaceTime manual</h2><a href="/spacetime/manual/">Overview</a><a href="/spacetime/manual/program.html">Program</a><a href="/spacetime/manual/stage4.html">Stage4</a><a href="/spacetime/manual/head.html" aria-current="page">Head</a><a href="/spacetime/manual/midi.html">MIDI</a><a href="/spacetime/manual/glue-left.html">Glue Left</a><a href="/spacetime/manual/glue-right.html">Glue Right</a></nav>
+    <article class="manual-article">
+      <img class="manual-shot" src="/assets/modules/head.png" alt="SpaceTime Head module">
+      <p class="eyebrow">10 HP function generator</p>
+      <h1>Head</h1>
+      <p class="intro">Each Head is an independent route through the stage field. Place one to eight directly left of MIDI or Program.</p>
+
+      <h2>Transport and status</h2>
+      <table><thead><tr><th>Control</th><th>Action</th></tr></thead><tbody>
+        <tr><td>Start</td><td>Run or resume. The input also supplies Sustain gate level and Enable threshold.</td></tr>
+        <tr><td>Stop</td><td>Stop immediately.</td></tr>
+        <tr><td>Advance</td><td>Force the next stage according to direction and region.</td></tr>
+        <tr><td>Reset</td><td>Return to the First stage of the active region.</td></tr>
+        <tr><td>Display</td><td>Latch this head as Program's live edit display. Press again, or use Select, to release.</td></tr>
+      </tbody></table>
+      <p>Green means running, yellow means holding or waiting for a selected clock source, and red means stopped or in Continuous addressing.</p>
+
+      <h2>Addressing</h2>
+      <table><thead><tr><th>Control</th><th>Choices</th></tr></thead><tbody>
+        <tr><td>Address</td><td>0–10 V position knob; scaling is selected on Program.</td></tr>
+        <tr><td>Int / Ext</td><td>Use the knob or Address CV input.</td></tr>
+        <tr><td>Mode</td><td>Strobe loads the addressed stage once; Sequential clocks through stages; Continuous sweeps the stage field directly from address.</td></tr>
+      </tbody></table>
+
+      <h2>Playback</h2>
+      <table><thead><tr><th>Control</th><th>Choices</th></tr></thead><tbody>
+        <tr><td>Direction</td><td>Forward, Reverse, Pendulum, Random, Brownian</td></tr>
+        <tr><td>Clock</td><td>Internal stage time, external CLK input, MIDI Clock, or Virtual Clock from MIDI CC</td></tr>
+        <tr><td>Div / Mult</td><td>/16, /8, /4, /2, ×1, ×2, ×4, ×8, ×16</td></tr>
+        <tr><td>Time CV</td><td>Bipolar attenuverter for the Time CV input, scaling all stage intervals for this head.</td></tr>
+        <tr><td>Loop</td><td>One-shot, First–Last region, or full chain</td></tr>
+      </tbody></table>
+
+      <h2>Inputs</h2>
+      <table><thead><tr><th>Input</th><th>Purpose</th></tr></thead><tbody>
+        <tr><td>Start</td><td>Start pulse; Sustain gate; Enable &gt;5 V threshold.</td></tr>
+        <tr><td>Stop</td><td>Stop pulse.</td></tr>
+        <tr><td>Advance</td><td>Force one stage transition.</td></tr>
+        <tr><td>Strobe</td><td>Load the stage selected by Address.</td></tr>
+        <tr><td>Address</td><td>External address voltage when Ext is selected.</td></tr>
+        <tr><td>CLK</td><td>External clock edges.</td></tr>
+        <tr><td>Time</td><td>Per-head modulation of interval duration.</td></tr>
+      </tbody></table>
+
+      <h2>Outputs</h2>
+      <table><thead><tr><th>Output</th><th>Signal</th></tr></thead><tbody>
+        <tr><td>CV</td><td>Rendered stage voltage; 1 V/oct when the stage is quantized.</td></tr>
+        <tr><td>Time</td><td>Current stage's time-slider value as CV.</td></tr>
+        <tr><td>Ref</td><td>Downward ramp spanning the interval.</td></tr>
+        <tr><td>All</td><td>Pulse at every stage entry.</td></tr>
+        <tr><td>P1 / P2</td><td>Programmed stage gates.</td></tr>
+        <tr><td>EOC</td><td>End-of-cycle or stop event.</td></tr>
+      </tbody></table>
+
+      <h2>MIDI transport</h2>
+      <p>The context menu identifies this head's fixed MIDI channel, shows its last CC, and enables <strong>Follow MIDI transport</strong>. When enabled, global MIDI Start, Stop, and Continue affect this head.</p>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><a href="/spacetime/manual/stage4.html">Previous: Stage4</a><a href="/spacetime/manual/midi.html">Next: MIDI</a></div></footer>
+</body>
+</html>
+

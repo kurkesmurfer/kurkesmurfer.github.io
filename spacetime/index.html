@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SpaceTime — Kurkesmurfer</title>
+  <meta name="description" content="SpaceTime is a multi-playhead arbitrary function generator family for VCV Rack 2, with 4–32 stages and up to eight independent heads.">
+  <link rel="icon" href="/assets/kurkesmurfer-logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand-link" href="/">
+        <img src="/assets/kurkesmurfer-logo.svg" alt="">
+        <span>Kurkesmurfer</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="/">Collection</a>
+        <a href="/spacetime/" aria-current="page">SpaceTime</a>
+        <a href="/spacetime/manual/">Manual</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="product-hero">
+      <div class="product-copy">
+        <p class="eyebrow">VCV Rack 2 instrument family</p>
+        <h1>SpaceTime</h1>
+        <p>One programmable field of stages. Up to eight independent ways through it.</p>
+      </div>
+      <div class="rack-scene" aria-label="SpaceTime modules arranged as a working chain">
+        <img src="/assets/modules/head.png" alt="">
+        <img class="midi" src="/assets/modules/midi.png" alt="">
+        <img src="/assets/modules/program.png" alt="">
+        <img src="/assets/modules/stage4.png" alt="">
+        <img src="/assets/modules/stage4.png" alt="">
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="inner">
+        <p class="eyebrow">Architecture</p>
+        <h2 class="section-heading">An instrument assembled to fit the patch.</h2>
+        <p class="lede">SpaceTime deconstructs the programming surface and function generators of the Buchla 248 concept into a contiguous VCV family. Stage blocks own their data, heads share the field without sharing transport, and MIDI sits transparently between them.</p>
+        <div class="architecture" aria-label="SpaceTime chain order">
+          <span>Head ×1–8</span><b>→</b><span>MIDI</span><b>→</b><span>Program</span><b>→</b><span>Stage4 ×1–8</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="band alt" id="modules">
+      <div class="inner">
+        <p class="eyebrow">Module family</p>
+        <h2 class="section-heading">Six roles, one shared instrument.</h2>
+        <div class="module-grid">
+          <article class="module-card">
+            <div class="module-image"><img src="/assets/modules/program.png" alt="Program module"></div>
+            <div class="module-card-content"><h3>Program</h3><p>Stage selection, modifiers, presets, scale, external inputs, and polyphonic output.</p><a href="/spacetime/manual/program.html">Manual</a></div>
+          </article>
+          <article class="module-card">
+            <div class="module-image"><img src="/assets/modules/stage4.png" alt="Stage4 module"></div>
+            <div class="module-card-content"><h3>Stage4</h3><p>Four voltage and interval sliders with programming and playhead feedback.</p><a href="/spacetime/manual/stage4.html">Manual</a></div>
+          </article>
+          <article class="module-card">
+            <div class="module-image"><img src="/assets/modules/head.png" alt="Head module"></div>
+            <div class="module-card-content"><h3>Head</h3><p>An independent function-generator playhead with transport, addressing, clocking, and outputs.</p><a href="/spacetime/manual/head.html">Manual</a></div>
+          </article>
+          <article class="module-card">
+            <div class="module-image"><img src="/assets/modules/midi.png" alt="MIDI module"></div>
+            <div class="module-card-content"><h3>MIDI</h3><p>Controller, clock, transport, preset, stage-programming, and per-head MIDI gateway.</p><a href="/spacetime/manual/midi.html">Manual</a></div>
+          </article>
+          <article class="module-card">
+            <div class="module-image"><img src="/assets/modules/glue-left.png" alt="Glue Left module"></div>
+            <div class="module-card-content"><h3>Glue Left</h3><p>The receiving endpoint of a SpaceTime-only virtual expander bridge.</p><a href="/spacetime/manual/glue-left.html">Manual</a></div>
+          </article>
+          <article class="module-card">
+            <div class="module-image"><img src="/assets/modules/glue-right.png" alt="Glue Right module"></div>
+            <div class="module-card-content"><h3>Glue Right</h3><p>The sending endpoint that lets a large chain cross rack space.</p><a href="/spacetime/manual/glue-right.html">Manual</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="inner collection-row">
+        <div>
+          <p class="eyebrow">Lineage</p>
+          <h2 class="section-heading">A behavioural reinterpretation.</h2>
+          <p class="lede">SpaceTime is inspired by the Buchla Model 248 MARF and Tiptop Audio/Buchla 248t. Its code, panel artwork, MIDI system, extended playhead modes, and virtual bridge are original work. It is not affiliated with or endorsed by Buchla USA or Tiptop Audio.</p>
+        </div>
+        <div>
+          <p class="eyebrow">Current status</p>
+          <ul class="status-list">
+            <li><span class="status-label">License</span><span>GPL-3.0-or-later</span></li>
+            <li><span class="status-label">VCV</span><span>Release candidate verification</span></li>
+            <li><span class="status-label">MetaModule</span><span>Feasible fused edition planned</span></li>
+            <li><span class="status-label">Contact</span><span><a href="mailto:peet@kurkesmurfer.com">peet@kurkesmurfer.com</a></span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© Peet Siemensz / Kurkesmurfer</span>
+      <a href="/spacetime/manual/">SpaceTime manual</a>
+    </div>
+  </footer>
+</body>
+</html>
+

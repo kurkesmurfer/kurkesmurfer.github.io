@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MIDI — SpaceTime Manual</title>
+  <meta name="description" content="SpaceTime MIDI module manual: device setup, channel allocation, stage and Program CC control, realtime clock and transport, and per-head note or CC output.">
+  <link rel="icon" href="/assets/kurkesmurfer-logo.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <header class="site-header"><div class="header-inner"><a class="brand-link" href="/"><img src="/assets/kurkesmurfer-logo.svg" alt=""><span>Kurkesmurfer</span></a><nav class="site-nav" aria-label="Primary navigation"><a href="/">Collection</a><a href="/spacetime/">SpaceTime</a><a href="/spacetime/manual/" aria-current="page">Manual</a></nav></div></header>
+  <main class="manual-layout">
+    <nav class="manual-nav" aria-label="SpaceTime manual"><h2>SpaceTime manual</h2><a href="/spacetime/manual/">Overview</a><a href="/spacetime/manual/program.html">Program</a><a href="/spacetime/manual/stage4.html">Stage4</a><a href="/spacetime/manual/head.html">Head</a><a href="/spacetime/manual/midi.html" aria-current="page">MIDI</a><a href="/spacetime/manual/glue-left.html">Glue Left</a><a href="/spacetime/manual/glue-right.html">Glue Right</a></nav>
+    <article class="manual-article">
+      <img class="manual-shot" src="/assets/modules/midi.png" alt="SpaceTime MIDI module">
+      <p class="eyebrow">4 HP controller and instrument gateway</p>
+      <h1>MIDI</h1>
+      <p class="intro">MIDI receives controller edits, clock, transport, and presets, then emits per-head notes or 7-bit CC. It is transparent to head numbering.</p>
+
+      <h2>Placement and activity</h2>
+      <p>Place MIDI directly left of Program and directly right of the heads. The green IN light reports accepted input, yellow CLK reports MIDI Clock, and red OUT reports emitted notes or CC.</p>
+
+      <h2>Device and channels</h2>
+      <table><thead><tr><th>Traffic</th><th>Channel</th></tr></thead><tbody>
+        <tr><td>Program, stages, presets</td><td>Channel 16 by default; configurable 1–16 in the context menu.</td></tr>
+        <tr><td>Head 1–8 controls</td><td>Fixed channels 1–8 respectively.</td></tr>
+        <tr><td>Clock and transport</td><td>MIDI System Realtime; channel-independent.</td></tr>
+        <tr><td>Head output lanes</td><td>Independently selectable channels 1–16.</td></tr>
+      </tbody></table>
+      <p>The Rack MIDI input is forced to All channels so SpaceTime can route Program and head traffic itself.</p>
+
+      <h2>Stage sliders</h2>
+      <table><thead><tr><th>CC range</th><th>Target</th></tr></thead><tbody>
+        <tr><td>0–31</td><td>Stage 1–32 voltage sliders.</td></tr>
+        <tr><td>32–63</td><td>Stage 1–32 time sliders.</td></tr>
+      </tbody></table>
+      <p>Values map 0–127 across the full slider travel. <strong>Move stage sliders with CC</strong> updates visible handles; when disabled, MIDI changes the active value while preserving normal takeover.</p>
+
+      <h2>Program CC</h2>
+      <table><thead><tr><th>CC</th><th>Target</th></tr></thead><tbody>
+        <tr><td>64–65</td><td>Select previous / next stage.</td></tr>
+        <tr><td>66–77</td><td>Quantize, Slope, Range, voltage Source, Stop, Sustain, Enable, First, Last, Pulse 1, Pulse 2, and time Source.</td></tr>
+        <tr><td>78–82</td><td>Limited range offsets −2 through +2.</td></tr>
+        <tr><td>83–86</td><td>Four interval-time ranges.</td></tr>
+        <tr><td>87–88</td><td>Clear and one-shot all-stage edit arm.</td></tr>
+        <tr><td>89</td><td>Key C through B.</td></tr>
+        <tr><td>90</td><td>Major, Minor, or Chromatic scale.</td></tr>
+        <tr><td>91</td><td>Pulse Retrig off / on.</td></tr>
+      </tbody></table>
+      <p>Program Change 1–12 recalls preset slots 1–12 on the Program/stage channel.</p>
+
+      <h2>Head CC</h2>
+      <table><thead><tr><th>CC</th><th>Target</th></tr></thead><tbody>
+        <tr><td>0</td><td>Virtual-clock edge.</td></tr>
+        <tr><td>1–4</td><td>Start, Stop, Advance, Reset.</td></tr>
+        <tr><td>5</td><td>Address.</td></tr>
+        <tr><td>6</td><td>Internal / external address source.</td></tr>
+        <tr><td>7</td><td>Strobe / Sequential / Continuous addressing.</td></tr>
+        <tr><td>8</td><td>Direction.</td></tr>
+        <tr><td>9</td><td>Internal / external / MIDI / virtual clock source.</td></tr>
+        <tr><td>10</td><td>Clock divide / multiply.</td></tr>
+        <tr><td>11</td><td>Time CV amount.</td></tr>
+        <tr><td>12</td><td>One-shot / First–Last / full-chain loop mode.</td></tr>
+        <tr><td>13</td><td>Display latch.</td></tr>
+      </tbody></table>
+
+      <h2>Realtime clock and transport</h2>
+      <p>F8 supplies MIDI Clock to heads whose clock source is MIDI. FA Start, FB Continue, and FC Stop affect only heads with <strong>Follow MIDI transport</strong> enabled.</p>
+      <div class="callout">The current implementation advances from individual F8 edges through the Head Div/Mult setting. A separate musical 24 PPQN interpretation layer is not part of version 2.0.0.</div>
+
+      <h2>Per-head output</h2>
+      <p>Configure each of eight lanes from <strong>HEAD n output</strong> in the context menu.</p>
+      <table><thead><tr><th>Mode</th><th>Behavior</th></tr></thead><tbody>
+        <tr><td>Off</td><td>No output; any active note is released.</td></tr>
+        <tr><td>Notes</td><td>Quantized Head CV becomes MIDI note number with 0 V = note 60. Gate source is Pulse 1, Pulse 2, or All.</td></tr>
+        <tr><td>CC 7-bit</td><td>Head CV becomes the selected CC, send-on-change with a short throttle.</td></tr>
+      </tbody></table>
+      <p>Pulse 1/2 notes end on gate fall. All produces a fixed 30 ms note. Unquantized stages do not emit notes.</p>
+
+      <h2>Deferred MIDI features</h2>
+      <p>14-bit CC, NRPN, note input, MIDI learn, and MIDI-clock output are intentionally outside the 2.0.0 scope.</p>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><a href="/spacetime/manual/head.html">Previous: Head</a><a href="/spacetime/manual/glue-left.html">Next: Glue Left</a></div></footer>
+</body>
+</html>
+
