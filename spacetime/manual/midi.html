@@ -21,32 +21,35 @@
 
       <h2>Device and channels</h2>
       <table><thead><tr><th>Traffic</th><th>Channel</th></tr></thead><tbody>
-        <tr><td>Program, stages, presets</td><td>Channel 16 by default; configurable 1–16 in the context menu.</td></tr>
+        <tr><td>Program controls and presets</td><td>Channel 16 by default; configurable 1–16 in the context menu.</td></tr>
+        <tr><td>Stage sliders</td><td>Channel 15 by default; configurable 1–16. It must differ from the Program channel.</td></tr>
         <tr><td>Head 1–8 controls</td><td>Fixed channels 1–8 respectively.</td></tr>
         <tr><td>Clock and transport</td><td>MIDI System Realtime; channel-independent.</td></tr>
         <tr><td>Head output lanes</td><td>Independently selectable channels 1–16.</td></tr>
       </tbody></table>
-      <p>The Rack MIDI input is forced to All channels so SpaceTime can route Program and head traffic itself.</p>
+      <p>The Rack MIDI input is forced to All channels so SpaceTime can route Program, stage, and head traffic itself. The panel readout prefixes the current channels with <strong>P</strong> and <strong>S</strong>.</p>
 
       <h2>Stage sliders</h2>
       <table><thead><tr><th>CC range</th><th>Target</th></tr></thead><tbody>
-        <tr><td>0–31</td><td>Stage 1–32 voltage sliders.</td></tr>
-        <tr><td>32–63</td><td>Stage 1–32 time sliders.</td></tr>
+        <tr><td>0–63</td><td>Stage 1–64 voltage sliders.</td></tr>
+        <tr><td>64–127</td><td>Stage 1–64 time sliders.</td></tr>
       </tbody></table>
       <p>Values map 0–127 across the full slider travel. <strong>Move stage sliders with CC</strong> updates visible handles; when disabled, MIDI changes the active value while preserving normal takeover.</p>
 
       <h2>Program CC</h2>
       <table><thead><tr><th>CC</th><th>Target</th></tr></thead><tbody>
         <tr><td>64–65</td><td>Select previous / next stage.</td></tr>
-        <tr><td>66–77</td><td>Quantize, Slope, Range, voltage Source, Stop, Sustain, Enable, First, Last, Pulse 1, Pulse 2, and time Source.</td></tr>
-        <tr><td>78–82</td><td>Limited range offsets −2 through +2.</td></tr>
-        <tr><td>83–86</td><td>Four interval-time ranges.</td></tr>
-        <tr><td>87–88</td><td>Clear and one-shot all-stage edit arm.</td></tr>
+        <tr><td>66–67</td><td>Clear and one-shot all-stage edit arm.</td></tr>
+        <tr><td>68–71</td><td>Quantize, Slope, Range, and voltage Source.</td></tr>
+        <tr><td>72–76</td><td>Limited range offsets −2 through +2.</td></tr>
+        <tr><td>77–81</td><td>Stop, Sustain, Enable, First, and Last.</td></tr>
+        <tr><td>82–85</td><td>Four interval-time ranges.</td></tr>
+        <tr><td>86–88</td><td>Time Source, Pulse 1, and Pulse 2.</td></tr>
         <tr><td>89</td><td>Key C through B.</td></tr>
         <tr><td>90</td><td>Major, Minor, or Chromatic scale.</td></tr>
         <tr><td>91</td><td>Pulse Retrig off / on.</td></tr>
       </tbody></table>
-      <p>Program Change 1–12 recalls preset slots 1–12 on the Program/stage channel.</p>
+      <p>Program Change 1–12 recalls preset slots 1–12 on the Program-controls channel.</p>
 
       <h2>Head CC</h2>
       <table><thead><tr><th>CC</th><th>Target</th></tr></thead><tbody>
@@ -83,4 +86,3 @@
   <footer class="site-footer"><div class="footer-inner"><a href="/spacetime/manual/head.html">Previous: Head</a><a href="/spacetime/manual/glue-left.html">Next: Glue Left</a></div></footer>
 </body>
 </html>
-
