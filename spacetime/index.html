@@ -51,7 +51,35 @@
       </div>
     </section>
 
-    <section class="band alt" id="modules">
+    <section class="band alt" id="install">
+      <div class="inner collection-row">
+        <div>
+          <p class="eyebrow">Preview builds</p>
+          <h2 class="section-heading">Install SpaceTime manually.</h2>
+          <p class="lede">Download the `.vcvplugin` package for Apple Silicon macOS, Intel macOS, Windows x64, or Linux x64 from GitHub Releases.</p>
+          <ol>
+            <li>In Rack, choose <strong>Help &gt; Open user folder</strong>, then quit Rack.</li>
+            <li>Place the package in the matching <code>plugins-&lt;OS&gt;-&lt;CPU&gt;</code> directory. Do not unpack it.</li>
+            <li>Restart Rack and find the modules under <strong>Kurkesmurfer</strong>.</li>
+          </ol>
+          <div class="action-row">
+            <a class="button" href="https://github.com/kurkesmurfer/SpaceTime/releases">Download builds</a>
+            <a class="button secondary" href="https://github.com/kurkesmurfer/SpaceTime">Source code</a>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow">Release-candidate warning</p>
+          <p class="lede">These builds may contain defects, including incorrect control or MIDI behaviour, crashes, or loss of unsaved patch state. Back up important patches and report reproducible problems through GitHub Issues.</p>
+          <ul class="status-list">
+            <li><span class="status-label">Tested</span><span>Apple Silicon macOS and principal workflows</span></li>
+            <li><span class="status-label">Pending</span><span>Intel macOS, Windows, and Linux platform acceptance</span></li>
+            <li><span class="status-label">Warranty</span><span>Provided as-is under GPL-3.0-or-later</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="modules">
       <div class="inner">
         <p class="eyebrow">Module family</p>
         <h2 class="section-heading">Seven roles, one shared instrument.</h2>
@@ -111,7 +139,7 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <span>© Kurkesmurfer</span>
-      <a href="/spacetime/manual/">SpaceTime manual</a>
+      <a href="https://github.com/kurkesmurfer/SpaceTime">GitHub repository</a>
     </div>
   </footer>
 </body>
