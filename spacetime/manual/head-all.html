@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Head All — SpaceTime Manual</title>
+  <meta name="description" content="SpaceTime Head All module manual: common transport, playback settings, and normalled CV inputs for up to eight Heads.">
+  <link rel="icon" href="/assets/kurkesmurfer-logo.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <header class="site-header"><div class="header-inner"><a class="brand-link" href="/"><img src="/assets/kurkesmurfer-logo.svg" alt=""><span>Kurkesmurfer</span></a><nav class="site-nav" aria-label="Primary navigation"><a href="/">Collection</a><a href="/spacetime/">SpaceTime</a><a href="/spacetime/manual/" aria-current="page">Manual</a></nav></div></header>
+  <main class="manual-layout">
+    <nav class="manual-nav" aria-label="SpaceTime manual"><h2>SpaceTime manual</h2><a href="/spacetime/manual/">Overview</a><a href="/spacetime/manual/program.html">Program</a><a href="/spacetime/manual/stage4.html">Stage4</a><a href="/spacetime/manual/head.html">Head</a><a href="/spacetime/manual/head-all.html" aria-current="page">Head All</a><a href="/spacetime/manual/midi.html">MIDI</a><a href="/spacetime/manual/glue-left.html">Glue Left</a><a href="/spacetime/manual/glue-right.html">Glue Right</a></nav>
+    <article class="manual-article">
+      <img class="manual-shot" src="/assets/modules/head-all.png" alt="SpaceTime Head All module">
+      <p class="eyebrow">10 HP common controller</p>
+      <h1>Head All</h1>
+      <p class="intro">Head All controls every connected Head together without becoming another playhead.</p>
+
+      <h2>Placement</h2>
+      <p>Place one Head All immediately left of the furthest Head. It is the far-left, source-only terminal and does not change Head numbering. A correctly paired Head-side Glue bridge may sit between it and the Heads. Duplicate or misplaced Head All modules break the chain.</p>
+      <p>The Link light is green when Head All sees a valid path to the instrument and dark when it is disconnected.</p>
+
+      <h2>Common transport</h2>
+      <table><thead><tr><th>Control or input</th><th>Action</th></tr></thead><tbody>
+        <tr><td>Start</td><td>Start or resume every connected Head. The input also becomes the common Sustain/Enable gate.</td></tr>
+        <tr><td>Stop</td><td>Stop every connected Head immediately.</td></tr>
+        <tr><td>Advance</td><td>Force one transition on every connected Head.</td></tr>
+        <tr><td>Reset</td><td>Return every Head to the First stage of its active region.</td></tr>
+        <tr><td>Strobe input</td><td>Load each Head from the common Address value.</td></tr>
+      </tbody></table>
+
+      <h2>Common settings</h2>
+      <p>Address, address source and mode, Direction, clock source, Div/Mult, Time CV amount, and Loop are copied to every Head when the Head All control changes. They are commands, not permanent locks: an individual Head can diverge afterward.</p>
+
+      <h2>Normalled inputs</h2>
+      <table><thead><tr><th>Input</th><th>Behavior</th></tr></thead><tbody>
+        <tr><td>Address</td><td>Common external address for Heads without a local Address cable.</td></tr>
+        <tr><td>CLK</td><td>Common external clock for Heads set to External whose local CLK is unpatched.</td></tr>
+        <tr><td>Time</td><td>Common timing modulation for Heads without a local Time cable.</td></tr>
+      </tbody></table>
+      <p>Patching the corresponding input on an individual Head overrides the common normal for that Head.</p>
+
+      <h2>MIDI</h2>
+      <p>Fixed MIDI channel 9 broadcasts the Head CC map through CC 0–12, whether or not the Head All panel is installed. CC 13 is ignored because Display ownership is intentionally exclusive. The MIDI channel controls all eight Head slots; only connected Heads can act on the commands.</p>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><a href="/spacetime/manual/head.html">Previous: Head</a><a href="/spacetime/manual/midi.html">Next: MIDI</a></div></footer>
+</body>
+</html>

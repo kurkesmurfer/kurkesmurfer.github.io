@@ -9,7 +9,7 @@
 <body>
   <header class="site-header"><div class="header-inner"><a class="brand-link" href="/"><img src="/assets/kurkesmurfer-logo.svg" alt=""><span>Kurkesmurfer</span></a><nav class="site-nav" aria-label="Primary navigation"><a href="/">Collection</a><a href="/spacetime/">SpaceTime</a><a href="/spacetime/manual/" aria-current="page">Manual</a></nav></div></header>
   <main class="manual-layout">
-    <nav class="manual-nav" aria-label="SpaceTime manual"><h2>SpaceTime manual</h2><a href="/spacetime/manual/">Overview</a><a href="/spacetime/manual/program.html">Program</a><a href="/spacetime/manual/stage4.html">Stage4</a><a href="/spacetime/manual/head.html">Head</a><a href="/spacetime/manual/midi.html" aria-current="page">MIDI</a><a href="/spacetime/manual/glue-left.html">Glue Left</a><a href="/spacetime/manual/glue-right.html">Glue Right</a></nav>
+    <nav class="manual-nav" aria-label="SpaceTime manual"><h2>SpaceTime manual</h2><a href="/spacetime/manual/">Overview</a><a href="/spacetime/manual/program.html">Program</a><a href="/spacetime/manual/stage4.html">Stage4</a><a href="/spacetime/manual/head.html">Head</a><a href="/spacetime/manual/head-all.html">Head All</a><a href="/spacetime/manual/midi.html" aria-current="page">MIDI</a><a href="/spacetime/manual/glue-left.html">Glue Left</a><a href="/spacetime/manual/glue-right.html">Glue Right</a></nav>
     <article class="manual-article">
       <img class="manual-shot" src="/assets/modules/midi.png" alt="SpaceTime MIDI module">
       <p class="eyebrow">4 HP controller and instrument gateway</p>
@@ -24,9 +24,11 @@
         <tr><td>Program controls and presets</td><td>Channel 16 by default; configurable 1–16 in the context menu.</td></tr>
         <tr><td>Stage sliders</td><td>Channel 15 by default; configurable 1–16. It must differ from the Program channel.</td></tr>
         <tr><td>Head 1–8 controls</td><td>Fixed channels 1–8 respectively.</td></tr>
+        <tr><td>Head All controls</td><td>Fixed channel 9; CC 0–12 broadcast to all Heads.</td></tr>
         <tr><td>Clock and transport</td><td>MIDI System Realtime; channel-independent.</td></tr>
         <tr><td>Head output lanes</td><td>Independently selectable channels 1–16.</td></tr>
       </tbody></table>
+      <p>Channel 9 reuses CC 0–12 as HEAD ALL commands. CC 13 is ignored on that channel because Display ownership remains exclusive to one Head. Channels 10–14 remain free under the default allocation.</p>
       <p>The Rack MIDI input is forced to All channels so SpaceTime can route Program, stage, and head traffic itself. The panel readout prefixes the current channels with <strong>P</strong> and <strong>S</strong>.</p>
 
       <h2>Stage sliders</h2>
@@ -83,6 +85,6 @@
       <p>14-bit CC, NRPN, note input, MIDI learn, and MIDI-clock output are intentionally outside the 2.0.0 scope.</p>
     </article>
   </main>
-  <footer class="site-footer"><div class="footer-inner"><a href="/spacetime/manual/head.html">Previous: Head</a><a href="/spacetime/manual/glue-left.html">Next: Glue Left</a></div></footer>
+  <footer class="site-footer"><div class="footer-inner"><a href="/spacetime/manual/head-all.html">Previous: Head All</a><a href="/spacetime/manual/glue-left.html">Next: Glue Left</a></div></footer>
 </body>
 </html>

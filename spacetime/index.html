@@ -6,7 +6,7 @@
   <title>SpaceTime — Kurkesmurfer</title>
   <meta name="description" content="SpaceTime is a multi-playhead arbitrary function generator family for VCV Rack 2, with 4–64 stages and up to eight independent heads.">
   <link rel="icon" href="/assets/kurkesmurfer-logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/site.css?v=20260715-3">
+  <link rel="stylesheet" href="/assets/site.css?v=20260731-1">
 </head>
 <body>
   <header class="site-header">
@@ -31,6 +31,7 @@
         <p>One programmable field of stages. Up to eight independent ways through it.</p>
       </div>
       <div class="rack-scene" aria-label="SpaceTime modules arranged as a working chain">
+        <img src="/assets/modules/head-all.png" alt="">
         <img src="/assets/modules/head.png" alt="">
         <img class="midi" src="/assets/modules/midi.png" alt="">
         <img src="/assets/modules/program.png" alt="">
@@ -45,7 +46,7 @@
         <h2 class="section-heading">An instrument assembled to fit the patch.</h2>
         <p class="lede">SpaceTime deconstructs the programming surface and function generators of the Buchla 248 concept into a contiguous VCV family. Stage blocks own their data, heads share the field without sharing transport, and MIDI sits transparently between them.</p>
         <div class="architecture" aria-label="SpaceTime chain order">
-          <span>Head ×1–8</span><b>→</b><span>MIDI</span><b>→</b><span>Program</span><b>→</b><span>Stage4 ×1–16</span>
+          <span>Head All (optional)</span><b>→</b><span>Head ×1–8</span><b>→</b><span>MIDI</span><b>→</b><span>Program</span><b>→</b><span>Stage4 ×1–16</span>
         </div>
       </div>
     </section>
@@ -53,7 +54,7 @@
     <section class="band alt" id="modules">
       <div class="inner">
         <p class="eyebrow">Module family</p>
-        <h2 class="section-heading">Six roles, one shared instrument.</h2>
+        <h2 class="section-heading">Seven roles, one shared instrument.</h2>
         <div class="module-grid">
           <article class="module-card">
             <div class="module-image"><img src="/assets/modules/program.png" alt="Program module"></div>
@@ -66,6 +67,10 @@
           <article class="module-card">
             <div class="module-image"><img src="/assets/modules/head.png" alt="Head module"></div>
             <div class="module-card-content"><h3>Head</h3><p>An independent function-generator playhead with transport, addressing, clocking, and outputs.</p><a href="/spacetime/manual/head.html">Manual</a></div>
+          </article>
+          <article class="module-card">
+            <div class="module-image"><img src="/assets/modules/head-all.png" alt="Head All module"></div>
+            <div class="module-card-content"><h3>Head All</h3><p>Common transport, playback modes, and normalled CV inputs for every connected Head.</p><a href="/spacetime/manual/head-all.html">Manual</a></div>
           </article>
           <article class="module-card">
             <div class="module-image"><img src="/assets/modules/midi.png" alt="MIDI module"></div>

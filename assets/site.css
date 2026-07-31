@@ -614,7 +614,7 @@ a:hover {
   }
 
   .rack-scene img {
-    height: min(220px, 52vw);
+    height: min(175px, 42vw);
   }
 
   .band {
