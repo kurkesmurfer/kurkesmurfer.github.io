@@ -6,7 +6,7 @@
   <title>Kurkesmurfer — Open instruments for VCV Rack</title>
   <meta name="description" content="Kurkesmurfer creates open-source instruments for VCV Rack. SpaceTime is a multi-playhead arbitrary function generator family.">
   <link rel="icon" href="/assets/kurkesmurfer-logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/site.css?v=20260731-1">
+  <link rel="stylesheet" href="/assets/site.css?v=20260801-1">
 </head>
 <body>
   <header class="site-header">
@@ -18,7 +18,8 @@
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="/" aria-current="page">Collection</a>
         <a href="/spacetime/">SpaceTime</a>
-        <a href="/spacetime/manual/">Manual</a>
+        <a href="/metamodule/">MetaModule</a>
+        <a href="/devlog/">Devlog</a>
       </nav>
     </div>
   </header>
@@ -63,13 +64,31 @@
             <li><span class="status-label">Verified</span><span>VCV Rack build and host test suite on Apple Silicon</span></li>
             <li><span class="status-label">Built</span><span>macOS arm64/x64, Windows x64, and Linux x64 packages</span></li>
             <li><span class="status-label">Testing</span><span>Release-candidate builds; Intel macOS, Windows, and Linux acceptance pending</span></li>
-            <li><span class="status-label">Planned</span><span>Fused 16-stage, two-head MetaModule edition</span></li>
+            <li><span class="status-label">Testing</span><span>Fused 64-stage, eight-head MetaModule Core on hardware</span></li>
           </ul>
         </div>
       </div>
     </section>
 
     <section class="band alt">
+      <div class="inner collection-row">
+        <div>
+          <p class="eyebrow">MetaModule</p>
+          <h2 class="section-heading">Open instruments, adapted for embedded use.</h2>
+          <p class="lede">Kurkesmurfer maintains independent MetaModule ports with public source, hardware test notes, direct downloads, and clear credit to the original authors.</p>
+          <div class="action-row"><a class="button" href="/metamodule/">Browse MetaModule ports</a></div>
+        </div>
+        <div>
+          <p class="eyebrow">Latest development</p>
+          <ul class="entry-list">
+            <li><time class="entry-meta" datetime="2026-08-01">1 August 2026 · SpaceTime</time><h2><a href="/devlog/2026-08-01-spacetime-feedback.html">SpaceTime learns to talk back</a></h2><p>Controller feedback, HEAD ALL, and 64-stage operation reach tested use.</p></li>
+            <li><time class="entry-meta" datetime="2026-08-01">1 August 2026 · MetaModule</time><h2><a href="/devlog/2026-08-01-metamodule-ports.html">A home for community ports</a></h2><p>The Schlappi ports gain a permanent, attributable release page.</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
       <div class="inner">
         <p class="eyebrow">Working principles</p>
         <h2 class="section-heading">Specific instruments, transparent lineage.</h2>

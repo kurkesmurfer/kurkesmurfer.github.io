@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A home for community MetaModule ports — Kurkesmurfer devlog</title>
+  <meta name="description" content="Kurkesmurfer now provides a permanent home for independently maintained, hardware-tested MetaModule ports.">
+  <link rel="icon" href="/assets/kurkesmurfer-logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/site.css?v=20260801-1">
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand-link" href="/"><img src="/assets/kurkesmurfer-logo.svg" alt=""><span>Kurkesmurfer</span></a>
+    <nav class="site-nav" aria-label="Primary navigation"><a href="/">Collection</a><a href="/spacetime/">SpaceTime</a><a href="/metamodule/" aria-current="page">MetaModule</a><a href="/devlog/">Devlog</a></nav>
+  </div></header>
+  <main class="article-layout">
+    <article>
+      <header class="article-header">
+        <p class="entry-meta"><time datetime="2026-08-01">1 August 2026</time> · MetaModule</p>
+        <h1>A home for community MetaModule ports</h1>
+      </header>
+      <div class="article-body">
+        <p class="intro">Useful ports should be findable, attributable, and candid about who maintains them.</p>
+        <p>The first published set brings Schlappi Engineering’s BTFLD, BTMX, and Nibbler VCV modules to the 4ms MetaModule. All three have been tested on MetaModule hardware. The embedded DSP paths were adapted to fit the processor budget, including ADAA or base-rate logic where the original desktop oversampling was too expensive.</p>
+        <p>I have made 4ms aware of this work but have not yet received a response. MetaModule forum users have nevertheless begun using the ports, so they now have a stable page for downloads, source, compatibility notes, and warnings.</p>
+
+        <h2>Clear ownership</h2>
+        <p>These are independent community ports. The original modules, names, panel designs, and VCV implementation remain the work and property of their respective authors. Kurkesmurfer maintains only the MetaModule adaptation and does not imply endorsement by 4ms or Schlappi Engineering.</p>
+
+        <h2>What comes next</h2>
+        <p>The MetaModule page will become the index for further ports once each has a public source tree, a reproducible build, a hardware acceptance record, and an installable release. Experimental builds will stay visibly separate from released ports.</p>
+        <div class="action-row"><a class="button" href="/metamodule/">MetaModule ports</a><a class="button secondary" href="https://github.com/kurkesmurfer/Schlappi-vcv/releases/tag/v2.0.22">Latest Schlappi release</a></div>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><a href="/devlog/">Development log</a><a href="https://github.com/kurkesmurfer/Schlappi-vcv/tree/metamodule-port">Port source</a></div></footer>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MetaModule ports — Kurkesmurfer</title>
+  <meta name="description" content="Hardware-tested community MetaModule ports maintained by Kurkesmurfer, with source, downloads, attribution, and compatibility notes.">
+  <link rel="icon" href="/assets/kurkesmurfer-logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/site.css?v=20260801-1">
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand-link" href="/"><img src="/assets/kurkesmurfer-logo.svg" alt=""><span>Kurkesmurfer</span></a>
+    <nav class="site-nav" aria-label="Primary navigation"><a href="/">Collection</a><a href="/spacetime/">SpaceTime</a><a href="/metamodule/" aria-current="page">MetaModule</a><a href="/devlog/">Devlog</a></nav>
+  </div></header>
+  <main>
+    <section class="page-intro"><div class="inner">
+      <p class="eyebrow">Community ports</p>
+      <h1>VCV instruments on MetaModule.</h1>
+      <p class="lede">Independent ports with public source, hardware test notes, direct downloads, and visible limits.</p>
+    </div></section>
+
+    <section class="band"><div class="inner">
+      <p class="eyebrow">Available now</p>
+      <h2 class="section-heading">Schlappi Engineering</h2>
+      <p class="lede">Three open-source VCV modules adapted for the 4ms MetaModule and verified on hardware.</p>
+      <div class="port-list">
+        <div class="port-row"><h3>BTFLD</h3><p>Bit Fold distortion, wavefolder, and four-bit asynchronous ADC. The MetaModule path uses first-order ADAA and output filtering.</p><span class="port-status">Hardware tested</span></div>
+        <div class="port-row"><h3>BTMX</h3><p>Four-channel logic mixer with AND, ADD, OR, and XOR modes. The embedded path uses base-rate Schmitt logic.</p><span class="port-status">Hardware tested</span></div>
+        <div class="port-row"><h3>Nibbler</h3><p>Four-bit accumulator with individual bit I/O and a stepped DAC output, using an embedded eight-times oversampled input path.</p><span class="port-status">Hardware tested</span></div>
+      </div>
+      <div class="action-row"><a class="button" href="https://github.com/kurkesmurfer/Schlappi-vcv/releases/download/v2.0.22/SchlappiEngineering-v2.0.22.mmplugin">Download v2.0.22</a><a class="button secondary" href="https://github.com/kurkesmurfer/Schlappi-vcv/releases/tag/v2.0.22">Release notes</a><a class="button secondary" href="https://github.com/kurkesmurfer/Schlappi-vcv/tree/metamodule-port">Source</a></div>
+    </div></section>
+
+    <section class="band alt"><div class="inner collection-row">
+      <div>
+        <p class="eyebrow">Installation</p>
+        <h2 class="section-heading">Add the plugin from removable storage.</h2>
+        <ol>
+          <li>Download the `.mmplugin` file.</li>
+          <li>Remove any older copy of the same plugin from the `metamodule-plugins` directory on the MetaModule SD card or USB drive.</li>
+          <li>Place the new file in `metamodule-plugins`, insert the media, and power on or reload plugins.</li>
+        </ol>
+      </div>
+      <div>
+        <p class="eyebrow">Compatibility and responsibility</p>
+        <ul class="status-list">
+          <li><span class="status-label">Target</span><span>4ms MetaModule; built with ARM GNU Toolchain 12.3</span></li>
+          <li><span class="status-label">License</span><span>GPL-3.0-or-later</span></li>
+          <li><span class="status-label">Status</span><span>Independent community build, not an official 4ms distribution</span></li>
+          <li><span class="status-label">Support</span><span><a href="https://github.com/kurkesmurfer/Schlappi-vcv/issues">Kurkesmurfer fork issues</a></span></li>
+        </ul>
+      </div>
+    </div></section>
+
+    <section class="band"><div class="inner">
+      <p class="eyebrow">Attribution</p>
+      <h2 class="section-heading">Ports do not transfer authorship.</h2>
+      <p class="lede">BTFLD, BTMX, and Nibbler are Schlappi Engineering instruments. Their original VCV implementation credits Eric Schlappi, Arden Butterfield, and Dan Green. This independent MetaModule adaptation is not affiliated with or endorsed by Schlappi Engineering or 4ms Company.</p>
+      <div class="callout">Community software can contain defects or behave differently from the source plugin. Back up patches, remove duplicate plugin versions before loading, and report reproducible problems through the port repository.</div>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><span>Kurkesmurfer MetaModule ports</span><a href="/devlog/2026-08-01-metamodule-ports.html">Development note</a></div></footer>
+</body>
+</html>

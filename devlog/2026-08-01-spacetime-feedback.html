@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SpaceTime learns to talk back — Kurkesmurfer devlog</title>
+  <meta name="description" content="SpaceTime development update: 64 stages, HEAD ALL, MetaModule work, and tested MIDI controller feedback.">
+  <link rel="icon" href="/assets/kurkesmurfer-logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/site.css?v=20260801-1">
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand-link" href="/"><img src="/assets/kurkesmurfer-logo.svg" alt=""><span>Kurkesmurfer</span></a>
+    <nav class="site-nav" aria-label="Primary navigation"><a href="/">Collection</a><a href="/spacetime/">SpaceTime</a><a href="/metamodule/">MetaModule</a><a href="/devlog/" aria-current="page">Devlog</a></nav>
+  </div></header>
+  <main class="article-layout">
+    <article>
+      <header class="article-header">
+        <p class="entry-meta"><time datetime="2026-08-01">1 August 2026</time> · SpaceTime</p>
+        <h1>SpaceTime learns to talk back</h1>
+      </header>
+      <div class="article-body">
+        <p class="intro">SpaceTime’s controller layer now reports what the instrument is actually doing, rather than leaving a control surface to guess.</p>
+
+        <h2>A larger instrument</h2>
+        <p>The VCV edition now accepts as many as sixteen Stage4 blocks: 64 stages shared by up to eight independent heads. The optional Head All module provides common start, stop, advance, reset, playback-mode, clock, and normalled CV controls. Every Head also has its own reset input.</p>
+        <p>Glue modules let the chain cross empty rack space, so the larger configuration does not have to occupy one uninterrupted row.</p>
+
+        <h2>Controller feedback</h2>
+        <p>The MIDI module now has a separate controller-feedback output. A platform-neutral engine emits sparse HEAD changes, full snapshots on request, protocol discovery, and deliberately visible acknowledgement pulses for momentary Advance and Reset commands.</p>
+        <p>The first complete path covers all eight Heads and the aggregate Head All view. It has been exercised with a Korg nanoKONTROL2 through Midilize, including external LED mode, controller reconnects, panel-side edits, and mixed per-head states. Program and Stage feedback are the next implementation slice.</p>
+
+        <h2>MetaModule</h2>
+        <p>A fused SpaceTime Core is running on MetaModule hardware with all 64 stages and eight heads. Shared-memory communication, instrument IDs, persistence, MIDI clocking, manual virtual-clock pulses, and multicore behaviour have been tested. This remains development work rather than a public release: its compact user interface and complete acceptance pass still need attention.</p>
+
+        <div class="callout"><strong>Current status:</strong> SpaceTime remains a release candidate. The source and VCV preview builds are public; the MetaModule build is not yet presented as a supported release.</div>
+        <div class="action-row"><a class="button" href="/spacetime/">SpaceTime overview</a><a class="button secondary" href="https://github.com/kurkesmurfer/SpaceTime">Source and builds</a></div>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><a href="/devlog/">Development log</a><a href="https://github.com/kurkesmurfer/SpaceTime">SpaceTime on GitHub</a></div></footer>
+</body>
+</html>
