@@ -12,5 +12,7 @@ The permanent `metamodule/` page lists only ports with public source, a
 reproducible package, and a hardware acceptance record. Experimental native
 Kurkesmurfer targets remain on their instrument pages until release-ready.
 
-SpaceTime is the first published collection. Module screenshots are generated
-from the packaged VCV Rack plugin with Rack's `--screenshot 1` command.
+Published collection pages cover SpaceTime, Collide, and Muse. SpaceTime module
+screenshots are generated from the packaged VCV Rack plugin with Rack's
+`--screenshot 1` command; preview artwork is used for instruments that are not
+yet released.
