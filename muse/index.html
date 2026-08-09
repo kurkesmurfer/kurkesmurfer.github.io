@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Muse — Kurkesmurfer</title>
-  <meta name="description" content="Muse is a 21-oscillator stereo drone instrument for VCV Rack and Daisy, with animated harmonic fields and consonance filtering.">
+  <meta name="description" content="Muse is a 21-oscillator stereo drone instrument for VCV Rack and Daisy; Muse-XT adds consonance filtering for VCV Rack and MetaModule.">
   <link rel="icon" href="/assets/kurkesmurfer-logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/site.css?v=20260809-1">
 </head>
@@ -21,8 +21,9 @@
         <h1>Muse</h1>
         <p>Twenty-one oscillators moving through a field of chords.</p>
       </div>
-      <div class="rack-scene product-family muse-family" aria-label="Muse module">
+      <div class="rack-scene product-family muse-family" aria-label="Muse and Muse-XT modules">
         <img src="/assets/muse/muse.png" alt="">
+        <img src="/assets/muse/muse-xt.png" alt="">
       </div>
     </section>
 
@@ -37,18 +38,19 @@
       <div>
         <p class="eyebrow">Consonance</p>
         <h2 class="section-heading">Make the harmonic field simpler without making it static.</h2>
-        <p class="lede">The consonance threshold filters the X sweep by the least-consonant interval in each chord. At one extreme the full field remains available; at the other, movement is restricted to octave and unison relationships.</p>
+        <p class="lede">Muse-XT adds a consonance threshold that filters the X sweep by the least-consonant interval in each chord. At one extreme the full field remains available; at the other, movement is restricted to octave and unison relationships.</p>
+        <div class="action-row"><a class="button" href="https://github.com/kurkesmurfer/Muse">Browse the GPL source</a></div>
       </div>
       <ul class="status-list">
         <li><span class="status-label">License</span><span>GPL-3.0-or-later</span></li>
         <li><span class="status-label">VCV</span><span>Four architecture packages built with Rack SDK 2.6.6</span></li>
-        <li><span class="status-label">Daisy</span><span>Playable hardware implementation in active development</span></li>
+        <li><span class="status-label">Daisy</span><span>Core Muse controls only; Muse-XT awaits a useful hardware mapping</span></li>
         <li><span class="status-label">Next</span><span>Smoothing X/Y/Z response under external CV to remove audible stepping</span></li>
       </ul>
     </div></section>
 
     <section class="band"><div class="inner collection-row">
-      <div><p class="eyebrow">Lineage</p><h2 class="section-heading">A clean, independent implementation.</h2><p class="lede">Muse studies a rare multi-oscillator hardware concept through independently written DSP for VCV Rack, MetaModule, and Daisy. The public source distribution contains only redistributable project code and assets. It is not affiliated with or endorsed by the designers or manufacturers of related hardware.</p></div>
+      <div><p class="eyebrow">Lineage</p><h2 class="section-heading">A clean, independent implementation.</h2><p class="lede">Muse studies a rare multi-oscillator hardware concept through independently written DSP for VCV Rack, MetaModule, and Daisy. Its clean-history public repository contains only redistributable project code and assets. It is not affiliated with or endorsed by the designers or manufacturers of related hardware.</p></div>
       <div class="callout">The VCV and Daisy versions are works in progress. Back up important patches, expect sound and control behaviour to evolve, and treat cross-platform packages as release candidates until acceptance testing is complete.</div>
     </div></section>
   </main>
