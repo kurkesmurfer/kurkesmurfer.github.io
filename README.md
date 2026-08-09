@@ -12,7 +12,7 @@ The permanent `metamodule/` page lists only ports with public source, a
 reproducible package, and a hardware acceptance record. Experimental native
 Kurkesmurfer targets remain on their instrument pages until release-ready.
 
-Published collection pages cover SpaceTime, Collide, and Muse. Module
+Published collection pages cover SpaceTime, Homodyne, and Muse. Module
 screenshots are generated from packaged VCV Rack plugins with Rack's
 `--screenshot 1` command; preview artwork is used for instruments that are not
 yet released.
