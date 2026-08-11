@@ -84,7 +84,7 @@ body {
   color: var(--paper);
   background: var(--ink);
   font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
-  font-size: 19px;
+  font-size: 17px;
   line-height: 1.45;
   letter-spacing: 0;
   transition: color 180ms ease, background-color 180ms ease;
@@ -152,7 +152,7 @@ a:hover {
 
 .brand-link span {
   font-family: "Fraunces", Georgia, serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
 }
 
@@ -160,7 +160,7 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 24px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -186,7 +186,7 @@ a:hover {
   color: var(--paper-muted);
   background: transparent;
   font: inherit;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
@@ -227,7 +227,7 @@ a:hover {
 
 .hero {
   position: relative;
-  min-height: min(600px, calc(100vh - 68px));
+  min-height: 540px;
   overflow: hidden;
   border-bottom: 1px solid var(--line-soft);
   background: var(--surface-hero);
@@ -248,15 +248,15 @@ a:hover {
   z-index: 3;
   width: min(calc(100% - 32px), var(--max));
   margin: 0 auto;
-  padding: clamp(72px, 10vh, 96px) 0 180px;
+  padding: clamp(60px, 8vh, 80px) 0 160px;
 }
 
 .hero-copy h1,
 .product-copy h1 {
-  max-width: 460px;
+  max-width: 400px;
   margin: 0;
   font-family: "Fraunces", Georgia, serif;
-  font-size: clamp(54px, 5.2vw, 68px);
+  font-size: clamp(44px, 4.5vw, 58px);
   line-height: 1;
   font-weight: 600;
   letter-spacing: 0;
@@ -264,17 +264,17 @@ a:hover {
 
 .hero-copy p,
 .product-copy p {
-  max-width: 410px;
-  margin: 20px 0 0;
+  max-width: 360px;
+  margin: 16px 0 0;
   color: var(--paper-muted);
-  font-size: 23px;
-  line-height: 1.3;
+  font-size: 19px;
+  line-height: 1.35;
 }
 
 .eyebrow {
   margin: 0 0 14px;
   color: var(--teal);
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -285,7 +285,7 @@ a:hover {
   right: max(16px, calc((100vw - var(--max)) / 2));
   bottom: 0;
   left: max(16px, calc((100vw - var(--max)) / 2));
-  height: 410px;
+  height: 370px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
@@ -296,7 +296,7 @@ a:hover {
 .rack-scene img {
   flex: 0 0 auto;
   width: auto;
-  height: 390px;
+  height: 350px;
   filter: drop-shadow(0 14px 20px var(--shadow-strong));
 }
 
@@ -318,7 +318,7 @@ a:hover {
   max-width: 780px;
   margin: 0 0 36px;
   font-family: "Fraunces", Georgia, serif;
-  font-size: clamp(32px, 5vw, 56px);
+  font-size: clamp(28px, 4vw, 44px);
   line-height: 1.05;
   font-weight: 600;
   letter-spacing: 0;
@@ -327,7 +327,7 @@ a:hover {
 .lede {
   max-width: 760px;
   color: var(--paper-muted);
-  font-size: 23px;
+  font-size: 19px;
 }
 
 .collection-row {
@@ -366,11 +366,11 @@ a:hover {
 }
 
 .product-family img {
-  height: 390px;
+  height: 350px;
 }
 
 .product-family.muse-family img {
-  height: 410px;
+  height: 360px;
 }
 
 .facts {
@@ -395,12 +395,12 @@ a:hover {
   display: block;
   color: var(--paper);
   font-family: "Fraunces", Georgia, serif;
-  font-size: 28px;
+  font-size: 24px;
 }
 
 .fact span {
   color: var(--paper-muted);
-  font-size: 16px;
+  font-size: 14px;
   text-transform: uppercase;
 }
 
@@ -421,7 +421,7 @@ a:hover {
   border-radius: 4px;
   color: var(--paper);
   background: var(--surface-button);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
@@ -449,7 +449,7 @@ a:hover {
 
 .status-label {
   color: var(--teal);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -492,18 +492,18 @@ a:hover {
 .module-card h3 {
   margin: 0 0 8px;
   font-family: "Fraunces", Georgia, serif;
-  font-size: 24px;
+  font-size: 21px;
 }
 
 .module-card p {
   margin: 0 0 20px;
   color: var(--paper-muted);
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .product-hero {
   position: relative;
-  min-height: min(600px, calc(100vh - 68px));
+  min-height: 540px;
   overflow: hidden;
   border-bottom: 1px solid var(--line-soft);
   background: var(--surface-hero);
@@ -514,11 +514,11 @@ a:hover {
   z-index: 3;
   width: min(calc(100% - 32px), var(--max));
   margin: 0 auto;
-  padding: clamp(72px, 10vh, 96px) 0 180px;
+  padding: clamp(60px, 8vh, 80px) 0 160px;
 }
 
 .product-copy h1 {
-  font-size: clamp(56px, 5.4vw, 70px);
+  font-size: clamp(46px, 4.6vw, 60px);
 }
 
 .architecture {
@@ -536,7 +536,7 @@ a:hover {
   border-radius: 3px;
   color: var(--paper-muted);
   background: var(--ink-raised);
-  font-size: 15px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 
@@ -563,7 +563,7 @@ a:hover {
 .manual-nav h2 {
   margin: 0 0 12px;
   color: var(--paper-muted);
-  font-size: 14px;
+  font-size: 12px;
   text-transform: uppercase;
 }
 
@@ -582,19 +582,19 @@ a:hover {
 .manual-article h1 {
   margin: 0 0 16px;
   font-family: "Fraunces", Georgia, serif;
-  font-size: clamp(42px, 7vw, 72px);
+  font-size: clamp(38px, 6vw, 58px);
   line-height: 1;
 }
 
 .manual-article h2 {
   margin: 54px 0 14px;
   font-family: "Fraunces", Georgia, serif;
-  font-size: 32px;
+  font-size: 27px;
 }
 
 .manual-article h3 {
   margin: 34px 0 8px;
-  font-size: 22px;
+  font-size: 19px;
 }
 
 .manual-article p,
@@ -604,14 +604,14 @@ a:hover {
 
 .manual-article .intro {
   color: var(--paper);
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .manual-article table {
   width: 100%;
   border-collapse: collapse;
   margin: 24px 0 36px;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .manual-article th,
@@ -653,7 +653,7 @@ a:hover {
   max-width: 820px;
   margin: 0;
   font-family: "Fraunces", Georgia, serif;
-  font-size: clamp(42px, 6vw, 68px);
+  font-size: clamp(36px, 5vw, 56px);
   line-height: 1.04;
   font-weight: 600;
 }
@@ -678,7 +678,7 @@ a:hover {
 .entry-list h2 {
   margin: 4px 0 8px;
   font-family: "Fraunces", Georgia, serif;
-  font-size: 28px;
+  font-size: 24px;
 }
 
 .entry-list h2 a {
@@ -698,7 +698,7 @@ a:hover {
 
 .entry-meta {
   color: var(--teal);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -725,7 +725,7 @@ a:hover {
 .article-body h2 {
   margin: 48px 0 12px;
   font-family: "Fraunces", Georgia, serif;
-  font-size: 32px;
+  font-size: 27px;
 }
 
 .article-body p,
@@ -735,7 +735,7 @@ a:hover {
 
 .article-body .intro {
   color: var(--paper);
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .port-list {
@@ -759,7 +759,7 @@ a:hover {
 
 .port-row h3 {
   font-family: "Fraunces", Georgia, serif;
-  font-size: 23px;
+  font-size: 20px;
 }
 
 .port-row p {
@@ -768,7 +768,7 @@ a:hover {
 
 .port-status {
   color: var(--teal);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -776,7 +776,7 @@ a:hover {
 .site-footer {
   padding: 40px 0;
   color: var(--paper-muted);
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .footer-inner {
@@ -803,24 +803,24 @@ a:hover {
 @media (max-width: 1180px) {
   .hero,
   .product-hero {
-    min-height: 700px;
+    min-height: 640px;
   }
 
   .hero-copy,
   .product-copy {
-    padding-top: 64px;
-    padding-bottom: 330px;
+    padding-top: 52px;
+    padding-bottom: 300px;
   }
 
   .rack-scene {
     right: 16px;
     left: 16px;
-    height: 320px;
+    height: 290px;
     justify-content: center;
   }
 
   .rack-scene img {
-    height: 300px;
+    height: 270px;
   }
 }
 
@@ -862,12 +862,12 @@ a:hover {
 
 @media (max-width: 640px) {
   body {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .site-nav {
     gap: 10px;
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .header-inner {
@@ -908,26 +908,26 @@ a:hover {
 
   .hero,
   .product-hero {
-    min-height: 620px;
+    min-height: 560px;
   }
 
   .hero-copy,
   .product-copy {
-    padding-top: 48px;
-    padding-bottom: 260px;
+    padding-top: 42px;
+    padding-bottom: 230px;
   }
 
   .hero-copy h1,
   .product-copy h1 {
-    font-size: 44px;
+    font-size: 38px;
   }
 
   .rack-scene {
-    height: 240px;
+    height: 215px;
   }
 
   .rack-scene img {
-    height: min(175px, 42vw);
+    height: min(160px, 39vw);
   }
 
   .collection-modules {
