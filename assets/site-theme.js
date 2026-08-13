@@ -16,21 +16,24 @@
 
   function panelSources(image) {
     var source = image.getAttribute("src");
+    var queryIndex = source.indexOf("?");
+    var query = queryIndex === -1 ? "" : source.slice(queryIndex);
+    var path = queryIndex === -1 ? source : source.slice(0, queryIndex);
 
-    if (source.indexOf("/assets/modules/") === 0) {
-      var darkSpaceTime = source.replace(/-light(?=\.png$)/, "");
+    if (path.indexOf("/assets/modules/") === 0) {
+      var darkSpaceTime = path.replace(/-light(?=\.png$)/, "");
       return {
-        dark: darkSpaceTime,
-        light: darkSpaceTime.replace(/\.png$/, "-light.png")
+        dark: darkSpaceTime + query,
+        light: darkSpaceTime.replace(/\.png$/, "-light.png") + query
       };
     }
 
-    if (source.indexOf("/assets/homodyne/") === 0 ||
-        source.indexOf("/assets/muse/") === 0) {
-      var lightPanel = source.replace(/-dark(?=\.png$)/, "");
+    if (path.indexOf("/assets/homodyne/") === 0 ||
+        path.indexOf("/assets/muse/") === 0) {
+      var lightPanel = path.replace(/-dark(?=\.png$)/, "");
       return {
-        dark: lightPanel.replace(/\.png$/, "-dark.png"),
-        light: lightPanel
+        dark: lightPanel.replace(/\.png$/, "-dark.png") + query,
+        light: lightPanel + query
       };
     }
 
