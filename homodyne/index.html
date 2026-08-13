@@ -7,7 +7,7 @@
   <meta name="description" content="Homodyne is a six-module quadrature spectral toolkit for VCV Rack, built around the musical possibilities of lock-in amplifier architecture.">
   <link rel="icon" href="/assets/kurkesmurfer-logo.svg" type="image/svg+xml">
   <script src="/assets/site-theme.js?v=20260810-1"></script>
-  <link rel="stylesheet" href="/assets/site.css?v=20260811-1">
+  <link rel="stylesheet" href="/assets/site.css?v=20260813-1">
 </head>
 <body>
   <header class="site-header"><div class="header-inner">
@@ -35,21 +35,22 @@
     <section class="band"><div class="inner">
       <p class="eyebrow">Architecture</p>
       <h2 class="section-heading">Six views into one unusual signal path.</h2>
-      <p class="lede">Homodyne turns the functional blocks of a musical lock-in amplifier into separate VCV modules. Use them as one analysis-and-resynthesis chain, or take the bandwidth filter, quadrature oscillator, phase network, demodulator, and analogue-computing ideas into unrelated patches.</p>
-      <div class="architecture" aria-label="Typical Homodyne signal path"><span>Amp</span><b>→</b><span>Bandf</span><b>→</b><span>Hilbert</span><b>→</b><span>Demod</span><b>→</b><span>Polar</span></div>
+      <p class="lede">Homodyne turns the functional blocks of a musical lock-in amplifier into separate VCV modules. Place the family together and its VCV expander interface supplies the normalled signal path; patching a destination jack overrides that normal. Every block remains available for unrelated patches.</p>
+      <div class="architecture" aria-label="Typical Homodyne signal path"><span>Amp</span><b>→</b><span>Bandf</span><b>→</b><span>Hilbert</span><b>+</b><span>Quadosc</span><b>→</b><span>Demod</span><b>→</b><span>Polar</span></div>
     </div></section>
 
     <section class="band alt"><div class="inner collection-row">
       <div>
         <p class="eyebrow">Preview status</p>
         <h2 class="section-heading">Ready for platform testing.</h2>
-        <p class="lede">Release-candidate packages have been built for Apple Silicon macOS, Intel macOS, Windows x64, and Linux x64. Hardware and cross-platform acceptance testing is still in progress.</p>
+        <p class="lede">The current VCV baseline is accepted on Apple Silicon. Matching Intel macOS, Windows x64, and Linux x64 packages have been cross-built and published to the private test node for acceptance on their native machines.</p>
       </div>
       <ul class="status-list">
         <li><span class="status-label">License</span><span>GPL-3.0-or-later</span></li>
         <li><span class="status-label">VCV</span><span>Four architecture packages built with Rack SDK 2.6.6</span></li>
         <li><span class="status-label">MetaModule</span><span>Preview package built and symbol-validated; hardware testing pending</span></li>
         <li><span class="status-label">Panels</span><span>Kurkesmurfer light and dark themes</span></li>
+        <li><span class="status-label">Accepted</span><span>Apple Silicon VCV functional test</span></li>
         <li><span class="status-label">Testing</span><span>Intel macOS, Windows, and Linux acceptance pending</span></li>
       </ul>
       <div class="action-row"><a class="button" href="https://github.com/kurkesmurfer/Homodyne/releases/download/v2.0.0-rc.1/Homodyne-v2.0.0.mmplugin">Download MetaModule preview</a><a class="button secondary" href="https://github.com/kurkesmurfer/Homodyne/releases/tag/v2.0.0-rc.1">All preview builds</a><a class="button secondary" href="https://github.com/kurkesmurfer/Homodyne">GPL source</a></div>

@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kurkesmurfer — Open instruments for VCV Rack</title>
-  <meta name="description" content="Kurkesmurfer creates open-source instruments for VCV Rack, including SpaceTime, Homodyne, and Muse.">
+  <meta name="description" content="Kurkesmurfer creates open-source instruments for VCV Rack, including SpaceTime, Homodyne, Muse, Inflection, and MultiPhaser.">
   <link rel="icon" href="/assets/kurkesmurfer-logo.svg" type="image/svg+xml">
   <script src="/assets/site-theme.js?v=20260810-1"></script>
-  <link rel="stylesheet" href="/assets/site.css?v=20260811-1">
+  <link rel="stylesheet" href="/assets/site.css?v=20260813-1">
 </head>
 <body>
   <header class="site-header">
@@ -112,6 +112,40 @@
     <section class="band alt">
       <div class="inner collection-row">
         <div>
+          <p class="eyebrow">Motion-sensitive wavefolding</p>
+          <h2 class="section-heading">Inflection</h2>
+          <p class="lede">Four independent mirror folders make the fold spacing respond to signal motion. Slow shapes remain broad while fast edges can drive into tighter, denser reflections.</p>
+          <div class="action-row">
+            <a class="button" href="/inflection/">Explore Inflection</a>
+            <a class="button secondary" href="https://github.com/kurkesmurfer/Inflection">Source</a>
+          </div>
+        </div>
+        <div class="signal-map" aria-label="Inflection signal path">
+          <span>Input 1–4</span><b>→</b><span>Moving mirrors</span><b>→</b><span>Fold + mix</span><b>→</b><span>Output 1–4</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="inner collection-row">
+        <div>
+          <p class="eyebrow">Ninety-nine-stage phase laboratory</p>
+          <h2 class="section-heading">MultiPhaser</h2>
+          <p class="lede">A stereo all-pass network with continuously addressed stages, sixteen selectable tap pairs, CV and clock scanning, and a compact variable-Q phase voice.</p>
+          <div class="action-row">
+            <a class="button" href="/multiphaser/">Explore MultiPhaser</a>
+            <a class="button secondary" href="https://github.com/kurkesmurfer/MultiPhaser">Source</a>
+          </div>
+        </div>
+        <div class="signal-map" aria-label="MultiPhaser module chain">
+          <span>MultiPhaser</span><b>→</b><span>Tap Out</span><b>→</b><span>Tap Scanner</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="band alt">
+      <div class="inner collection-row">
+        <div>
           <p class="eyebrow">MetaModule</p>
           <h2 class="section-heading">Open instruments, adapted for embedded use.</h2>
           <p class="lede">Kurkesmurfer maintains independent MetaModule ports with public source, hardware test notes, direct downloads, and clear credit to the original authors.</p>
@@ -120,6 +154,7 @@
         <div>
           <p class="eyebrow">Latest development</p>
           <ul class="entry-list">
+            <li><time class="entry-meta" datetime="2026-08-13">13 August 2026 · Inflection + MultiPhaser</time><h2><a href="/devlog/2026-08-13-inflection-multiphaser.html">Two more instruments enter the public baseline</a></h2><p>Inflection and MultiPhaser gain clean public source histories and explicit cross-platform test status.</p></li>
             <li><time class="entry-meta" datetime="2026-08-09">9 August 2026 · Homodyne + Muse</time><h2><a href="/devlog/2026-08-09-homodyne-muse.html">Two new fields of sound</a></h2><p>New collection pages document the VCV release candidates and the work still ahead.</p></li>
             <li><time class="entry-meta" datetime="2026-08-01">1 August 2026 · SpaceTime</time><h2><a href="/devlog/2026-08-01-spacetime-feedback.html">SpaceTime learns to talk back</a></h2><p>Controller feedback, HEAD ALL, and 64-stage operation reach tested use.</p></li>
             <li><time class="entry-meta" datetime="2026-08-01">1 August 2026 · MetaModule</time><h2><a href="/devlog/2026-08-01-metamodule-ports.html">A home for community ports</a></h2><p>The Schlappi ports gain a permanent, attributable release page.</p></li>

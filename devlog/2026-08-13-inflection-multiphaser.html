@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inflection and MultiPhaser enter the public baseline — Kurkesmurfer</title>
+  <meta name="description" content="Inflection and MultiPhaser gain clean public source baselines and move into Kurkesmurfer's cross-platform VCV testing workflow.">
+  <link rel="icon" href="/assets/kurkesmurfer-logo.svg" type="image/svg+xml">
+  <script src="/assets/site-theme.js?v=20260810-1"></script>
+  <link rel="stylesheet" href="/assets/site.css?v=20260813-1">
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand-link" href="/"><img src="/assets/kurkesmurfer-logo.svg" alt=""><span>Kurkesmurfer</span></a>
+    <nav class="site-nav" aria-label="Primary navigation"><a href="/">Collection</a><a href="/spacetime/">SpaceTime</a><a href="/metamodule/">MetaModule</a><a href="/devlog/" aria-current="page">Devlog</a></nav>
+  </div></header>
+  <main>
+    <article class="devlog-entry">
+      <div class="inner article-body">
+        <p class="entry-meta"><time datetime="2026-08-13">13 August 2026</time> · Inflection + MultiPhaser</p>
+        <h1>Two more instruments enter the public baseline</h1>
+        <p class="intro">A test build becomes much more useful when its exact source state has a permanent name and a public history.</p>
+
+        <h2>Inflection</h2>
+        <p>Inflection is a four-channel multi-mirror wavefolder whose mirror spacing responds to signal slope. Its 2.0.0 baseline is working well in the initial Apple Silicon VCV pass, its portable DSP tests pass, and matching Intel macOS, Windows x64, and Linux x64 packages are now in the cross-platform test node.</p>
+
+        <h2>MultiPhaser</h2>
+        <p>MultiPhaser builds a stereo phase laboratory from two coherent ninety-nine-stage all-pass chains. Its family includes direct wet outputs, sixteen stereo tap slots, CV and clock scanning, a self-contained hardware companion, and the compact PhaseQ voice. Version 2.4.0 now has a clean public source baseline and a passing portable DSP suite.</p>
+
+        <h2>The test gate</h2>
+        <p>Kurkesmurfer VCV revisions are exercised first on the Apple Silicon development machine. Once that functional gate passes, matching Intel macOS, Windows, and Linux packages move to the private publishing node for native-machine acceptance. A cross-compile is evidence that the code builds; it is not a substitute for opening patches, moving controls, and listening on the target machine.</p>
+
+        <div class="callout"><strong>Current distinction:</strong> Inflection 2.0.0 has passed the Apple Silicon functional gate. MultiPhaser’s current public source is 2.4.0, while the externally circulated cross-platform snapshot remains 2.3.0 until 2.4.0 passes the same gate.</div>
+        <div class="action-row"><a class="button" href="/inflection/">Explore Inflection</a><a class="button secondary" href="/multiphaser/">Explore MultiPhaser</a></div>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><a href="/devlog/">Development log</a><a href="https://github.com/kurkesmurfer">GitHub</a></div></footer>
+</body>
+</html>

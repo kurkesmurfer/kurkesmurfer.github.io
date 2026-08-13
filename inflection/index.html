@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inflection — Kurkesmurfer</title>
+  <meta name="description" content="Inflection is a four-channel motion-sensitive multi-mirror wavefolder for VCV Rack, MetaModule, and Daisy Patch.">
+  <link rel="icon" href="/assets/kurkesmurfer-logo.svg" type="image/svg+xml">
+  <script src="/assets/site-theme.js?v=20260810-1"></script>
+  <link rel="stylesheet" href="/assets/site.css?v=20260813-1">
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand-link" href="/"><img src="/assets/kurkesmurfer-logo.svg" alt=""><span>Kurkesmurfer</span></a>
+    <nav class="site-nav" aria-label="Primary navigation"><a href="/">Collection</a><a href="/spacetime/">SpaceTime</a><a href="/metamodule/">MetaModule</a><a href="/devlog/">Devlog</a></nav>
+  </div></header>
+
+  <main>
+    <section class="product-hero">
+      <div class="product-copy">
+        <p class="eyebrow">VCV Rack 2 wavefolder</p>
+        <h1>Inflection</h1>
+        <p>Four folding channels whose mirrors move with the signal.</p>
+      </div>
+      <div class="rack-scene diagram-scene" aria-label="Inflection signal path">
+        <div class="signal-map"><span>Input 1–4</span><b>→</b><span>Motion</span><b>→</b><span>Mirror fold</span><b>→</b><span>Mix</span><b>→</b><span>Output 1–4</span></div>
+      </div>
+    </section>
+
+    <section class="band"><div class="inner">
+      <p class="eyebrow">Instrument</p>
+      <h2 class="section-heading">Folding that distinguishes movement from position.</h2>
+      <p class="lede">Each channel reflects the signal between two mirrors. Spacing sets their base distance, Offset moves them together, and Motion narrows their separation in response to input slope. Slow contours and fast edges can therefore enter different folding regimes at the same level.</p>
+      <div class="facts"><div class="fact"><strong>4</strong><span>Independent channels</span></div><div class="fact"><strong>5</strong><span>Primary controls</span></div><div class="fact"><strong>2×4</strong><span>Spacing and offset CV inputs</span></div></div>
+    </div></section>
+
+    <section class="band alt"><div class="inner collection-row">
+      <div>
+        <p class="eyebrow">Public baseline</p>
+        <h2 class="section-heading">Version 2.0.0 is ready for wider platform testing.</h2>
+        <p class="lede">Inflection is working well in its initial Apple Silicon VCV test. Matching Intel macOS, Windows x64, and Linux x64 packages are in the Kurkesmurfer test node for native-machine acceptance.</p>
+        <div class="action-row"><a class="button" href="https://github.com/kurkesmurfer/Inflection">GPL source</a><a class="button secondary" href="https://github.com/kurkesmurfer/Inflection/issues">Report an issue</a></div>
+      </div>
+      <ul class="status-list">
+        <li><span class="status-label">Version</span><span>2.0.0 source baseline</span></li>
+        <li><span class="status-label">License</span><span>GPL-3.0-or-later</span></li>
+        <li><span class="status-label">Accepted</span><span>Apple Silicon VCV functional test and portable DSP suite</span></li>
+        <li><span class="status-label">Testing</span><span>Intel macOS, Windows, and Linux acceptance pending</span></li>
+        <li><span class="status-label">Targets</span><span>VCV Rack, MetaModule, and Daisy Patch source trees</span></li>
+      </ul>
+    </div></section>
+
+    <section class="band"><div class="inner collection-row">
+      <div><p class="eyebrow">Open questions</p><h2 class="section-heading">The useful edges remain visible.</h2><p class="lede">The derivative reference and Daisy oversampling strategy remain tuning decisions rather than hidden assumptions. Reserved gate and CV outputs deliberately emit zero, and channels three and four remain independent folders.</p></div>
+      <div class="callout">The current baseline is frozen so listening and platform results can be compared against one exact implementation before those decisions move again.</div>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><span>© Kurkesmurfer</span><a href="/">All collections</a></div></footer>
+</body>
+</html>

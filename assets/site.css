@@ -545,6 +545,56 @@ a:hover {
   font-weight: 600;
 }
 
+.signal-map {
+  min-height: 180px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 30px;
+  border: 1px solid var(--line-soft);
+  border-radius: 6px;
+  background: var(--surface-module);
+  box-shadow: 0 14px 28px var(--shadow-soft);
+}
+
+.signal-map span {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: var(--paper-muted);
+  background: var(--ink-raised);
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.signal-map b {
+  color: var(--red);
+  font-weight: 600;
+}
+
+.collection-row > .signal-map {
+  gap: 6px;
+  padding: 20px;
+}
+
+.collection-row > .signal-map span {
+  padding: 8px;
+  font-size: 12px;
+}
+
+.diagram-scene {
+  left: 46%;
+  bottom: 52px;
+  height: 270px;
+  align-items: center;
+}
+
+.diagram-scene .signal-map {
+  width: 100%;
+}
+
 .manual-layout {
   width: min(calc(100% - 32px), var(--max));
   margin: 0 auto;
@@ -817,6 +867,12 @@ a:hover {
     left: 16px;
     height: 290px;
     justify-content: center;
+  }
+
+  .diagram-scene {
+    left: 16px;
+    bottom: 12px;
+    height: 260px;
   }
 
   .rack-scene img {
