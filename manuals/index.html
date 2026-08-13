@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manuals — Kurkesmurfer</title>
+  <meta name="description" content="Documentation status and useful references for Kurkesmurfer VCV Rack plugins.">
+  <link rel="icon" href="/assets/kurkesmurfer-logo.svg" type="image/svg+xml">
+  <script src="/assets/site-theme.js?v=20260813-2"></script>
+  <link rel="stylesheet" href="/assets/site.css?v=20260813-2">
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand-link" href="/"><img src="/assets/kurkesmurfer-logo.svg" alt=""><span>Kurkesmurfer</span></a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="nav-home" href="/">Collection</a>
+      <details class="plugin-menu">
+        <summary>Plugins</summary>
+        <div class="plugin-menu-list">
+          <a href="/spacetime/">SpaceTime</a>
+          <a href="/homodyne/">Homodyne</a>
+          <a href="/muse/">Muse</a>
+          <a href="/inflection/">Inflection</a>
+          <a href="/multiphaser/">MultiPhaser</a>
+        </div>
+      </details>
+      <a class="nav-manuals" href="/manuals/" aria-current="page">Manuals</a>
+      <a class="nav-metamodule" href="/metamodule/">MetaModule</a>
+      <a class="nav-devlog" href="/devlog/">Devlog</a>
+    </nav>
+  </div></header>
+
+  <main>
+    <section class="page-intro"><div class="inner">
+      <p class="eyebrow">Documentation</p>
+      <h1>Manuals and useful references.</h1>
+      <p class="lede">Most Kurkesmurfer instruments are still work in progress. This page distinguishes a usable reference from an overview or development note, and points to the best information currently available.</p>
+    </div></section>
+
+    <section class="band"><div class="inner documentation-grid">
+      <article class="documentation-card" id="spacetime">
+        <span class="documentation-state">Web reference available</span>
+        <h2>SpaceTime</h2>
+        <p>A complete family overview plus individual references for Program, Stage4, Head, Head All, MIDI, Glue Left, and Glue Right. Release-candidate behaviour can still change.</p>
+        <div class="action-row"><a class="button" href="/spacetime/manual/">Open manual</a><a class="button secondary" href="https://github.com/kurkesmurfer/SpaceTime#readme">README</a></div>
+      </article>
+
+      <article class="documentation-card" id="homodyne">
+        <span class="documentation-state">Work in progress</span>
+        <h2>Homodyne</h2>
+        <p>The project page explains the six modules and the functional chain. The README documents VCV-only expander normalization, placement order, signal fallbacks, and patch-cable overrides. A per-control web manual is not yet published.</p>
+        <div class="action-row"><a class="button" href="/homodyne/">Project guide</a><a class="button secondary" href="https://github.com/kurkesmurfer/Homodyne#homodyne-chain-normalisations-vcv-rack">Normalization reference</a></div>
+      </article>
+
+      <article class="documentation-card" id="muse">
+        <span class="documentation-state">Work in progress</span>
+        <h2>Muse</h2>
+        <p>The project page now summarizes the verified X/Y/Z, pitch, index, animation, quantization, CV, reset, LFO, and Muse-XT consonance controls. A full patching and behaviour manual is still needed.</p>
+        <div class="action-row"><a class="button" href="/muse/#controls">Control overview</a><a class="button secondary" href="https://github.com/kurkesmurfer/Muse#readme">README</a></div>
+      </article>
+
+      <article class="documentation-card" id="inflection">
+        <span class="documentation-state">Work in progress</span>
+        <h2>Inflection</h2>
+        <p>The project page explains the motion-sensitive folding model. The repository README contains the current control table, target mappings, and open design decisions. A dedicated web manual is not yet published.</p>
+        <div class="action-row"><a class="button" href="/inflection/">Project guide</a><a class="button secondary" href="https://github.com/kurkesmurfer/Inflection#controls">Control reference</a></div>
+      </article>
+
+      <article class="documentation-card" id="multiphaser">
+        <span class="documentation-state">Work in progress</span>
+        <h2>MultiPhaser</h2>
+        <p>The project page covers the module family and baseline status. The README documents placement, hardware editions, tap interpolation, feedback, scanning, and PhaseQ; the architecture note covers repository and expander boundaries.</p>
+        <div class="action-row"><a class="button" href="/multiphaser/">Project guide</a><a class="button secondary" href="https://github.com/kurkesmurfer/MultiPhaser#readme">Technical reference</a></div>
+      </article>
+    </div></section>
+
+    <section class="band alt"><div class="inner collection-row">
+      <div><p class="eyebrow">Reading the status</p><h2 class="section-heading">Documentation freezes later than code.</h2><p class="lede">A work-in-progress label means the linked information is useful and based on the current source, but names, ranges, normalizations, or platform mappings may still move before a stable release.</p></div>
+      <div class="callout">When the panel, tooltip, and documentation disagree, report the mismatch through the plugin’s GitHub Issues page. That discrepancy is a bug in the release baseline.</div>
+    </div></section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-inner"><span>© Kurkesmurfer</span><a href="https://github.com/kurkesmurfer">GitHub</a></div></footer>
+</body>
+</html>

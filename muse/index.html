@@ -6,13 +6,28 @@
   <title>Muse — Kurkesmurfer</title>
   <meta name="description" content="Muse is a 21-oscillator stereo drone instrument for VCV Rack and Daisy; Muse-XT adds consonance filtering for VCV Rack and MetaModule.">
   <link rel="icon" href="/assets/kurkesmurfer-logo.svg" type="image/svg+xml">
-  <script src="/assets/site-theme.js?v=20260810-1"></script>
-  <link rel="stylesheet" href="/assets/site.css?v=20260811-1">
+  <script src="/assets/site-theme.js?v=20260813-2"></script>
+  <link rel="stylesheet" href="/assets/site.css?v=20260813-2">
 </head>
 <body>
   <header class="site-header"><div class="header-inner">
     <a class="brand-link" href="/"><img src="/assets/kurkesmurfer-logo.svg" alt=""><span>Kurkesmurfer</span></a>
-    <nav class="site-nav" aria-label="Primary navigation"><a href="/">Collection</a><a href="/spacetime/">SpaceTime</a><a href="/metamodule/">MetaModule</a><a href="/devlog/">Devlog</a></nav>
+<nav class="site-nav" aria-label="Primary navigation">
+  <a class="nav-home" href="/">Collection</a>
+  <details class="plugin-menu">
+    <summary aria-current="page">Plugins</summary>
+    <div class="plugin-menu-list">
+      <a href="/spacetime/">SpaceTime</a>
+      <a href="/homodyne/">Homodyne</a>
+      <a href="/muse/" aria-current="page">Muse</a>
+      <a href="/inflection/">Inflection</a>
+      <a href="/multiphaser/">MultiPhaser</a>
+    </div>
+  </details>
+  <a class="nav-manuals" href="/manuals/">Manuals</a>
+  <a class="nav-metamodule" href="/metamodule/">MetaModule</a>
+  <a class="nav-devlog" href="/devlog/">Devlog</a>
+</nav>
   </div></header>
 
   <main>
@@ -35,7 +50,23 @@
       <div class="facts"><div class="fact"><strong>21</strong><span>Oscillators</span></div><div class="fact"><strong>23</strong><span>LFOs</span></div><div class="fact"><strong>61</strong><span>Chord positions</span></div></div>
     </div></section>
 
-    <section class="band alt"><div class="inner collection-row">
+    <section class="band alt" id="controls"><div class="inner collection-row">
+      <div>
+        <p class="eyebrow">Control overview</p>
+        <h2 class="section-heading">Three coordinates shape the field.</h2>
+        <p class="lede"><strong>X</strong> moves through chord stacking, <strong>Y</strong> changes octave and inversion, and <strong>Z</strong> blends the wavetable. Pitch spans ±4 V and accepts two V/oct inputs. Index selects the wavetable region; Animate introduces detune, stereo movement, and LFO motion.</p>
+      </div>
+      <ul class="status-list">
+        <li><span class="status-label">Quantize</span><span>Free, just-intonation snap, or octave</span></li>
+        <li><span class="status-label">X/Y/Z CV</span><span>Individual attenuverters; Y and Z normalize to the internal LFOs</span></li>
+        <li><span class="status-label">Motion</span><span>Phase modulation, LFO-speed CV, nearest gate, and reset trigger</span></li>
+        <li><span class="status-label">Outputs</span><span>Stereo audio plus two ±5 V LFO outputs</span></li>
+        <li><span class="status-label">Muse-XT</span><span>Adds a consonance threshold with CV and attenuverter</span></li>
+      </ul>
+      <div class="action-row"><a class="button secondary" href="/manuals/#muse">Documentation status</a></div>
+    </div></section>
+
+    <section class="band"><div class="inner collection-row">
       <div>
         <p class="eyebrow">Consonance</p>
         <h2 class="section-heading">Make the harmonic field simpler without making it static.</h2>
@@ -51,7 +82,7 @@
       </ul>
     </div></section>
 
-    <section class="band"><div class="inner collection-row">
+    <section class="band alt"><div class="inner collection-row">
       <div><p class="eyebrow">Lineage</p><h2 class="section-heading">A clean, independent implementation.</h2><p class="lede">Muse studies a rare multi-oscillator hardware concept through independently written DSP for VCV Rack, MetaModule, and Daisy. Its clean-history public repository contains only redistributable project code and assets. It is not affiliated with or endorsed by the designers or manufacturers of related hardware.</p></div>
       <div class="callout">The VCV and Daisy versions are works in progress. Back up important patches, expect sound and control behaviour to evolve, and treat cross-platform packages as release candidates until acceptance testing is complete.</div>
     </div></section>

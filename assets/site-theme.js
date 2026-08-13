@@ -105,9 +105,37 @@
     actions.appendChild(button);
   }
 
+  function installPluginMenus() {
+    var menus = document.querySelectorAll("details.plugin-menu");
+
+    document.addEventListener("click", function (event) {
+      menus.forEach(function (menu) {
+        if (menu.open && !menu.contains(event.target)) {
+          menu.removeAttribute("open");
+        }
+      });
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key !== "Escape") {
+        return;
+      }
+      menus.forEach(function (menu) {
+        if (menu.open) {
+          menu.removeAttribute("open");
+          menu.querySelector("summary").focus();
+        }
+      });
+    });
+  }
+
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", installToggle, { once: true });
+    document.addEventListener("DOMContentLoaded", function () {
+      installToggle();
+      installPluginMenus();
+    }, { once: true });
   } else {
     installToggle();
+    installPluginMenus();
   }
 }());

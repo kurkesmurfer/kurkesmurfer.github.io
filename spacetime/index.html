@@ -6,8 +6,8 @@
   <title>SpaceTime — Kurkesmurfer</title>
   <meta name="description" content="SpaceTime is a multi-playhead arbitrary function generator family for VCV Rack 2, with 4–64 stages and up to eight independent heads.">
   <link rel="icon" href="/assets/kurkesmurfer-logo.svg" type="image/svg+xml">
-  <script src="/assets/site-theme.js?v=20260810-1"></script>
-  <link rel="stylesheet" href="/assets/site.css?v=20260811-1">
+  <script src="/assets/site-theme.js?v=20260813-2"></script>
+  <link rel="stylesheet" href="/assets/site.css?v=20260813-2">
 </head>
 <body>
   <header class="site-header">
@@ -16,12 +16,22 @@
         <img src="/assets/kurkesmurfer-logo.svg" alt="">
         <span>Kurkesmurfer</span>
       </a>
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="/">Collection</a>
-        <a href="/spacetime/" aria-current="page">SpaceTime</a>
-        <a href="/metamodule/">MetaModule</a>
-        <a href="/devlog/">Devlog</a>
-      </nav>
+<nav class="site-nav" aria-label="Primary navigation">
+  <a class="nav-home" href="/">Collection</a>
+  <details class="plugin-menu">
+    <summary aria-current="page">Plugins</summary>
+    <div class="plugin-menu-list">
+      <a href="/spacetime/" aria-current="page">SpaceTime</a>
+      <a href="/homodyne/">Homodyne</a>
+      <a href="/muse/">Muse</a>
+      <a href="/inflection/">Inflection</a>
+      <a href="/multiphaser/">MultiPhaser</a>
+    </div>
+  </details>
+  <a class="nav-manuals" href="/manuals/">Manuals</a>
+  <a class="nav-metamodule" href="/metamodule/">MetaModule</a>
+  <a class="nav-devlog" href="/devlog/">Devlog</a>
+</nav>
     </div>
   </header>
 
@@ -66,6 +76,7 @@
           </ol>
           <div class="action-row">
             <a class="button" href="https://github.com/kurkesmurfer/SpaceTime/releases">Download builds</a>
+            <a class="button secondary" href="/spacetime/manual/">Read the manual</a>
             <a class="button secondary" href="https://github.com/kurkesmurfer/SpaceTime">Source code</a>
           </div>
         </div>

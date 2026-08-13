@@ -6,13 +6,28 @@
   <title>MultiPhaser — Kurkesmurfer</title>
   <meta name="description" content="MultiPhaser is a stereo 99-stage all-pass phase laboratory with selectable taps, scanning, and compact variable-Q phase voices.">
   <link rel="icon" href="/assets/kurkesmurfer-logo.svg" type="image/svg+xml">
-  <script src="/assets/site-theme.js?v=20260810-1"></script>
-  <link rel="stylesheet" href="/assets/site.css?v=20260813-1">
+  <script src="/assets/site-theme.js?v=20260813-2"></script>
+  <link rel="stylesheet" href="/assets/site.css?v=20260813-2">
 </head>
 <body>
   <header class="site-header"><div class="header-inner">
     <a class="brand-link" href="/"><img src="/assets/kurkesmurfer-logo.svg" alt=""><span>Kurkesmurfer</span></a>
-    <nav class="site-nav" aria-label="Primary navigation"><a href="/">Collection</a><a href="/spacetime/">SpaceTime</a><a href="/metamodule/">MetaModule</a><a href="/devlog/">Devlog</a></nav>
+<nav class="site-nav" aria-label="Primary navigation">
+  <a class="nav-home" href="/">Collection</a>
+  <details class="plugin-menu">
+    <summary aria-current="page">Plugins</summary>
+    <div class="plugin-menu-list">
+      <a href="/spacetime/">SpaceTime</a>
+      <a href="/homodyne/">Homodyne</a>
+      <a href="/muse/">Muse</a>
+      <a href="/inflection/">Inflection</a>
+      <a href="/multiphaser/" aria-current="page">MultiPhaser</a>
+    </div>
+  </details>
+  <a class="nav-manuals" href="/manuals/">Manuals</a>
+  <a class="nav-metamodule" href="/metamodule/">MetaModule</a>
+  <a class="nav-devlog" href="/devlog/">Devlog</a>
+</nav>
   </div></header>
 
   <main>
@@ -40,7 +55,7 @@
         <p class="eyebrow">Public baseline</p>
         <h2 class="section-heading">Version 2.4.0 is frozen in source.</h2>
         <p class="lede">The current repository records the VCV family, portable DSP engine, MetaModule companion, Daisy firmware, and disting NT algorithm in one clean public history. The externally circulated platform-test snapshot remains version 2.3.0 until the 2.4.0 VCV build completes its Apple Silicon gate.</p>
-        <div class="action-row"><a class="button" href="https://github.com/kurkesmurfer/MultiPhaser">GPL source</a><a class="button secondary" href="https://github.com/kurkesmurfer/MultiPhaser/issues">Report an issue</a></div>
+        <div class="action-row"><a class="button" href="https://github.com/kurkesmurfer/MultiPhaser">GPL source</a><a class="button secondary" href="/manuals/#multiphaser">Documentation</a><a class="button secondary" href="https://github.com/kurkesmurfer/MultiPhaser/issues">Report an issue</a></div>
       </div>
       <ul class="status-list">
         <li><span class="status-label">Version</span><span>2.4.0 source baseline</span></li>
