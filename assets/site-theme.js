@@ -29,7 +29,9 @@
     }
 
     if (path.indexOf("/assets/homodyne/") === 0 ||
-        path.indexOf("/assets/muse/") === 0) {
+        path.indexOf("/assets/muse/") === 0 ||
+        path.indexOf("/assets/inflection/") === 0 ||
+        path.indexOf("/assets/multiphaser/") === 0) {
       var lightPanel = path.replace(/-dark(?=\.png$)/, "");
       return {
         dark: lightPanel.replace(/\.png$/, "-dark.png") + query,
@@ -43,7 +45,7 @@
   function syncPanelImages() {
     var panelTheme = theme === "light" ? "dark" : "light";
     var images = document.querySelectorAll(
-      'img[src^="/assets/modules/"], img[src^="/assets/homodyne/"], img[src^="/assets/muse/"]'
+      'img[src^="/assets/modules/"], img[src^="/assets/homodyne/"], img[src^="/assets/muse/"], img[src^="/assets/inflection/"], img[src^="/assets/multiphaser/"]'
     );
 
     images.forEach(function (image) {
