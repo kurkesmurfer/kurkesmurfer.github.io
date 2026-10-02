@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MultiPhaser — Kurkesmurfer</title>
-  <meta name="description" content="MultiPhaser is a stereo 99-stage all-pass phase laboratory with selectable taps, scanning, and compact variable-Q phase voices.">
+  <meta name="description" content="MultiPhaser is a stereo 99-stage all-pass phaser with selectable taps, scanning, and a compact variable-Q voice.">
   <link rel="icon" href="/assets/kurkesmurfer-logo.svg?v=20260821-1" type="image/svg+xml">
   <script src="/assets/site-theme.js?v=20260821-1"></script>
   <link rel="stylesheet" href="/assets/site.css?v=20260821-1">
@@ -33,9 +33,9 @@
   <main>
     <section class="product-hero">
       <div class="product-copy">
-        <p class="eyebrow">VCV Rack 2 phase laboratory</p>
+        <p class="eyebrow">VCV Rack 2 stereo phaser</p>
         <h1>MultiPhaser</h1>
-        <p>Ninety-nine coherent all-pass stages, exposed from sweep to individual tap.</p>
+        <p>A 99-stage stereo phaser with selectable taps and scanning.</p>
       </div>
       <div class="rack-scene product-family multiphaser-family" aria-label="MultiPhaser module chain">
         <img src="/assets/multiphaser/multiphaser.png?v=20260821-1" alt="MultiPhaser module">
@@ -46,7 +46,7 @@
 
     <section class="band"><div class="inner">
       <p class="eyebrow">Architecture</p>
-      <h2 class="section-heading">One phase network, several ways to enter it.</h2>
+      <h2 class="section-heading">One network, several ways to use it.</h2>
       <p class="lede">Two stereo chains evaluate all ninety-nine stages continuously. The main module crossfades fractional stage addresses, Tap Out exposes sixteen independently placed stereo pairs, and Tap Scanner moves across a selectable range under CV or clock control.</p>
       <div class="facts"><div class="fact"><strong>99×2</strong><span>All-pass stages</span></div><div class="fact"><strong>16</strong><span>Stereo tap slots</span></div><div class="fact"><strong>5</strong><span>VCV modules</span></div></div>
       <div class="architecture" aria-label="MultiPhaser family"><span>MultiPhaser</span><b>→</b><span>Tap Out</span><b>→</b><span>Tap Scanner</span><b>+</b><span>PhaseQ</span><b>+</b><span>MultiPhaser Meta</span></div>
@@ -54,7 +54,7 @@
 
     <section class="band alt"><div class="inner">
       <p class="eyebrow">Module family</p>
-      <h2 class="section-heading">The complete phase network.</h2>
+      <h2 class="section-heading">The full module family.</h2>
       <div class="module-family-showcase" aria-label="MultiPhaser module family">
         <img src="/assets/multiphaser/multiphaser.png?v=20260821-1" alt="MultiPhaser module">
         <img src="/assets/multiphaser/tap-out.png?v=20260821-1" alt="Tap Out module">
@@ -66,9 +66,9 @@
 
     <section class="band"><div class="inner collection-row">
       <div>
-        <p class="eyebrow">Public baseline</p>
-        <h2 class="section-heading">Version 2.4.0 is frozen in source.</h2>
-        <p class="lede">The current repository records the VCV family, portable DSP engine, MetaModule companion, Daisy firmware, and disting NT algorithm in one clean public history. The externally circulated platform-test snapshot remains version 2.3.0 until the 2.4.0 VCV build completes its Apple Silicon gate.</p>
+        <p class="eyebrow">Testing status</p>
+        <h2 class="section-heading">Version 2.4.0 is fixed in source.</h2>
+        <p class="lede">The repository includes the VCV family, portable DSP engine, MetaModule companion, Daisy firmware, and disting NT algorithm. The platform-test snapshot remains version 2.3.0 until the 2.4.0 VCV build passes its Apple Silicon test.</p>
         <div class="action-row"><a class="button" href="https://github.com/kurkesmurfer/MultiPhaser">GPL source</a><a class="button secondary" href="/manuals/#multiphaser">Documentation</a><a class="button secondary" href="https://github.com/kurkesmurfer/MultiPhaser/issues">Report an issue</a></div>
       </div>
       <ul class="status-list">
@@ -81,7 +81,7 @@
     </div></section>
 
     <section class="band"><div class="inner collection-row">
-      <div><p class="eyebrow">PhaseQ</p><h2 class="section-heading">A smaller voice for chains and stereo motion.</h2><p class="lede">PhaseQ packages one variable-Q second-order all-pass section with CV over frequency, Q, mix, and bipolar feedback. Separate wet and mixed outputs support cascades, notch responses, and animated stereo pairs without the expander bus.</p></div>
+      <div><p class="eyebrow">PhaseQ</p><h2 class="section-heading">A smaller voice for chains and stereo motion.</h2><p class="lede">PhaseQ is a variable-Q all-pass module with CV over frequency, Q, mix, and bipolar feedback. It has separate wet and mixed outputs for cascades, notch responses, and stereo patches without the expander bus.</p></div>
       <div class="callout">MultiPhaser was prompted by open phaser work, including MSM Phaser and Ross Bencina’s classic MusicDSP example. Its coefficient calculation, stereo engine, tap protocol, and scanner are independently implemented.</div>
     </div></section>
   </main>
