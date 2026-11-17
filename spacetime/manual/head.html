@@ -27,10 +27,10 @@
   <a class="nav-devlog" href="/devlog/">Devlog</a>
 </nav></div></header>
   <main class="manual-layout">
-    <nav class="manual-nav" aria-label="SpaceTime manual"><h2>SpaceTime manual</h2><a href="/spacetime/manual/">Overview</a><a href="/spacetime/manual/program.html">Program</a><a href="/spacetime/manual/stage4.html">Stage4</a><a href="/spacetime/manual/head.html" aria-current="page">Head</a><a href="/spacetime/manual/head-all.html">Head All</a><a href="/spacetime/manual/midi.html">MIDI</a><a href="/spacetime/manual/glue-left.html">Glue Left</a><a href="/spacetime/manual/glue-right.html">Glue Right</a></nav>
+    <nav class="manual-nav" aria-label="SpaceTime manual"><h2>SpaceTime manual</h2><a href="/spacetime/manual/">Overview</a><a href="/spacetime/manual/program.html">Program</a><a href="/spacetime/manual/stage4.html">Stage4</a><a href="/spacetime/manual/stage-time.html">Stage Time</a><a href="/spacetime/manual/head.html" aria-current="page">Head</a><a href="/spacetime/manual/head-all.html">Head All</a><a href="/spacetime/manual/midi.html">MIDI</a><a href="/spacetime/manual/glue-left.html">Glue Left</a><a href="/spacetime/manual/glue-right.html">Glue Right</a></nav>
     <article class="manual-article">
-      <img class="manual-shot" src="/assets/modules/head-light.png?v=20260821-1" alt="SpaceTime Head module with light panel">
-      <p class="eyebrow">10 HP function generator</p>
+      <img class="manual-shot" src="/assets/modules/head-light.png?v=20261117-rc2" alt="12 HP SpaceTime Head module with light panel">
+      <p class="eyebrow">12 HP function generator</p>
       <h1>Head</h1>
       <p class="intro">Each Head is an independent route through the stage field. Place one to eight directly left of MIDI or Program.</p>
 
@@ -55,8 +55,9 @@
       <table><thead><tr><th>Control</th><th>Choices</th></tr></thead><tbody>
         <tr><td>Direction</td><td>Forward, Reverse, Pendulum, Random, Brownian</td></tr>
         <tr><td>Clock</td><td>Internal stage time, external CLK input, MIDI Clock, or Virtual Clock from MIDI CC</td></tr>
-        <tr><td>Div / Mult</td><td>/16, /8, /4, /2, ×1, ×2, ×4, ×8, ×16</td></tr>
+        <tr><td>Div / Mult</td><td>/16, /8, /4, /2, ×1, ×2, ×4, ×8, ×16. Sets the base clock rate.</td></tr>
         <tr><td>Time CV</td><td>Bipolar attenuverter for the Time CV input, scaling all stage intervals for this head.</td></tr>
+        <tr><td>Time Mult</td><td>Continuous ×0.5 to ×4, with ×1 at center. Scales each resulting interval.</td></tr>
         <tr><td>Loop</td><td>One-shot, First–Last region, or full chain</td></tr>
       </tbody></table>
 
@@ -82,8 +83,9 @@
         <tr><td>EOC</td><td>End-of-cycle or stop event.</td></tr>
       </tbody></table>
 
-      <h2>MIDI transport</h2>
-      <p>The context menu identifies this head's fixed MIDI channel, shows its last CC, and enables <strong>Follow MIDI transport</strong>. When enabled, global MIDI Start, Stop, and Continue affect this head.</p>
+      <h2>MIDI control</h2>
+      <p>The MIDI module's context menu sets the instance's contiguous HEAD input-channel range. The channel selects this Head by its position in the chain. The Head context menu shows its Head number, last received CC, and <strong>Follow MIDI transport</strong> setting. When enabled, MIDI Start, Stop, and Continue affect this Head.</p>
+      <p>For per-stage SYNC timing, the Stage Time companion sets the Program-selected stage to FREE or SYNC. In SYNC, the stage's time slider selects a note division; this Head's clock source and Div / Mult supply the base clock rate.</p>
     </article>
   </main>
   <footer class="site-footer"><div class="footer-inner"><a href="/spacetime/manual/stage4.html">Previous: Stage4</a><a href="/spacetime/manual/head-all.html">Next: Head All</a></div></footer>

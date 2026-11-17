@@ -27,7 +27,7 @@
   <a class="nav-devlog" href="/devlog/">Devlog</a>
 </nav></div></header>
   <main class="manual-layout">
-    <nav class="manual-nav" aria-label="SpaceTime manual"><h2>SpaceTime manual</h2><a href="/spacetime/manual/">Overview</a><a href="/spacetime/manual/program.html">Program</a><a href="/spacetime/manual/stage4.html">Stage4</a><a href="/spacetime/manual/head.html">Head</a><a href="/spacetime/manual/head-all.html" aria-current="page">Head All</a><a href="/spacetime/manual/midi.html">MIDI</a><a href="/spacetime/manual/glue-left.html">Glue Left</a><a href="/spacetime/manual/glue-right.html">Glue Right</a></nav>
+    <nav class="manual-nav" aria-label="SpaceTime manual"><h2>SpaceTime manual</h2><a href="/spacetime/manual/">Overview</a><a href="/spacetime/manual/program.html">Program</a><a href="/spacetime/manual/stage4.html">Stage4</a><a href="/spacetime/manual/stage-time.html">Stage Time</a><a href="/spacetime/manual/head.html">Head</a><a href="/spacetime/manual/head-all.html" aria-current="page">Head All</a><a href="/spacetime/manual/midi.html">MIDI</a><a href="/spacetime/manual/glue-left.html">Glue Left</a><a href="/spacetime/manual/glue-right.html">Glue Right</a></nav>
     <article class="manual-article">
       <img class="manual-shot" src="/assets/modules/head-all-light.png?v=20260821-1" alt="SpaceTime Head All module with light panel">
       <p class="eyebrow">10 HP common controller</p>
@@ -59,7 +59,7 @@
       <p>Patching the corresponding input on an individual Head overrides the common normal for that Head.</p>
 
       <h2>MIDI</h2>
-      <p>Fixed MIDI channel 9 broadcasts the Head CC map through CC 0–12, whether or not the Head All panel is installed. CC 13 is ignored because Display ownership is intentionally exclusive. The MIDI channel controls all eight Head slots; only connected Heads can act on the commands.</p>
+      <p>Program-channel CC 32–44 broadcasts Head CC 0–12 to every connected Head, whether or not the Head All panel is installed. CC 45 (Display) is ignored because Display ownership is intentionally exclusive.</p>
     </article>
   </main>
   <footer class="site-footer"><div class="footer-inner"><a href="/spacetime/manual/head.html">Previous: Head</a><a href="/spacetime/manual/midi.html">Next: MIDI</a></div></footer>

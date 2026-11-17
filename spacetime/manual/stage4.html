@@ -27,7 +27,7 @@
   <a class="nav-devlog" href="/devlog/">Devlog</a>
 </nav></div></header>
   <main class="manual-layout">
-    <nav class="manual-nav" aria-label="SpaceTime manual"><h2>SpaceTime manual</h2><a href="/spacetime/manual/">Overview</a><a href="/spacetime/manual/program.html">Program</a><a href="/spacetime/manual/stage4.html" aria-current="page">Stage4</a><a href="/spacetime/manual/head.html">Head</a><a href="/spacetime/manual/head-all.html">Head All</a><a href="/spacetime/manual/midi.html">MIDI</a><a href="/spacetime/manual/glue-left.html">Glue Left</a><a href="/spacetime/manual/glue-right.html">Glue Right</a></nav>
+    <nav class="manual-nav" aria-label="SpaceTime manual"><h2>SpaceTime manual</h2><a href="/spacetime/manual/">Overview</a><a href="/spacetime/manual/program.html">Program</a><a href="/spacetime/manual/stage4.html" aria-current="page">Stage4</a><a href="/spacetime/manual/stage-time.html">Stage Time</a><a href="/spacetime/manual/head.html">Head</a><a href="/spacetime/manual/head-all.html">Head All</a><a href="/spacetime/manual/midi.html">MIDI</a><a href="/spacetime/manual/glue-left.html">Glue Left</a><a href="/spacetime/manual/glue-right.html">Glue Right</a></nav>
     <article class="manual-article">
       <img class="manual-shot" src="/assets/modules/stage4-light.png?v=20260821-1" alt="SpaceTime Stage4 module with light panel">
       <p class="eyebrow">10 HP four-stage block</p>
@@ -46,6 +46,8 @@
 
       <h2>Ownership and reordering</h2>
       <p>A Stage4 block owns both its slider values and its four stages of programming. Moving a block moves that four-stage phrase intact. Removing or inserting blocks changes the active stage count immediately.</p>
+      <h2>Free and synchronized timing</h2>
+      <p>Use the Stage Time companion to set the Program-selected stage to FREE or SYNC. FREE uses the time slider and its selected time range as usual. SYNC interprets that slider as one of nine note divisions, shown above the slider. The active Head supplies the clock source and its Div / Mult control selects the base clock rate.</p>
       <div class="callout">A physical gap or foreign module truncates the normal expander chain. Use a matched Glue Right and Glue Left pair when the block must live elsewhere in the rack.</div>
 
       <h2>Preset takeover</h2>

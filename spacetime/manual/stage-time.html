@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stage Time — SpaceTime Manual</title>
+  <meta name="description" content="SpaceTime Stage Time module manual: per-stage free and synchronized note-division timing, selected-stage tracking, and instrument routing.">
+  <link rel="icon" href="/assets/kurkesmurfer-logo.svg?v=20260821-1" type="image/svg+xml">
+  <script src="/assets/site-theme.js?v=20260821-1"></script>
+  <link rel="stylesheet" href="/assets/site.css?v=20260821-1">
+</head>
+<body>
+  <header class="site-header"><div class="header-inner"><a class="brand-link" href="/"><img src="/assets/kurkesmurfer-logo.svg?v=20260821-1" alt=""><span>Kurkesmurfer</span></a>
+<nav class="site-nav" aria-label="Primary navigation">
+  <a class="nav-home" href="/">Collection</a>
+  <details class="plugin-menu">
+    <summary aria-current="page">Plugins</summary>
+    <div class="plugin-menu-list">
+      <a href="/spacetime/" aria-current="page">SpaceTime</a>
+      <a href="/homodyne/">Homodyne</a>
+      <a href="/muse/">Muse</a>
+      <a href="/inflection/">Inflection</a>
+      <a href="/multiphaser/">MultiPhaser</a>
+    </div>
+  </details>
+  <a class="nav-manuals" href="/manuals/">Manuals</a>
+  <a class="nav-metamodule" href="/metamodule/">MetaModule</a>
+  <a class="nav-devlog" href="/devlog/">Devlog</a>
+</nav></div></header>
+  <main class="manual-layout">
+    <nav class="manual-nav" aria-label="SpaceTime manual"><h2>SpaceTime manual</h2><a href="/spacetime/manual/">Overview</a><a href="/spacetime/manual/program.html">Program</a><a href="/spacetime/manual/stage4.html">Stage4</a><a href="/spacetime/manual/stage-time.html" aria-current="page">Stage Time</a><a href="/spacetime/manual/head.html">Head</a><a href="/spacetime/manual/head-all.html">Head All</a><a href="/spacetime/manual/midi.html">MIDI</a><a href="/spacetime/manual/glue-left.html">Glue Left</a><a href="/spacetime/manual/glue-right.html">Glue Right</a></nav>
+    <article class="manual-article">
+      <p class="eyebrow">10 HP timing companion</p>
+      <h1>Stage Time</h1>
+      <p class="intro">Stage Time sets the timing interpretation of the stage selected in Program. It follows that selection, so the mode can be programmed one stage at a time without adding controls to the Head.</p>
+
+      <h2>FREE and SYNC</h2>
+      <table><thead><tr><th>Mode</th><th>Meaning</th></tr></thead><tbody>
+        <tr><td>FREE</td><td>The Stage4 time slider and its selected range set the stage interval as usual.</td></tr>
+        <tr><td>SYNC</td><td>The same slider selects one of nine note divisions, from 1/64 through 4/1. Stage4 displays the selected division and note symbol above the slider.</td></tr>
+      </tbody></table>
+      <p>Move the spring-return switch up to set FREE or down to set SYNC. The upper and lower red LEDs show the stored mode; the switch itself returns to center.</p>
+
+      <h2>How the Head interprets SYNC</h2>
+      <p>The Head playing the stage supplies the clock source. With External, MIDI, or Virtual clock, the Head's Div / Mult setting selects the base clock rate and the stage division scales it. With an Internal clock, the current slider value supplies the free-time base and the selected division scales that interval. The Head's Time Mult control scales the resulting interval further.</p>
+      <p>Stage duration does not stretch the stage-address range: each address still selects one stage.</p>
+
+      <h2>Selection and instrument ID</h2>
+      <p>The number display follows Program's selected stage. When placed beside Program, Stage Time follows that Program's instrument ID automatically. Its bottom selector can change the ID when used standalone or when routing among multiple SpaceTime instances.</p>
+
+      <h2>Apply to all stages</h2>
+      <p>Stage Time mode edits use Program's normal all-stage edit behavior. Arm <strong>Apply next edit to ALL stages</strong> in Program, then set FREE or SYNC once to apply that mode to every stage.</p>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><a href="/spacetime/manual/stage4.html">Previous: Stage4</a><a href="/spacetime/manual/head.html">Next: Head</a></div></footer>
+</body>
+</html>

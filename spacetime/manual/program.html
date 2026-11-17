@@ -27,7 +27,7 @@
   <a class="nav-devlog" href="/devlog/">Devlog</a>
 </nav></div></header>
   <main class="manual-layout">
-    <nav class="manual-nav" aria-label="SpaceTime manual"><h2>SpaceTime manual</h2><a href="/spacetime/manual/">Overview</a><a href="/spacetime/manual/program.html" aria-current="page">Program</a><a href="/spacetime/manual/stage4.html">Stage4</a><a href="/spacetime/manual/head.html">Head</a><a href="/spacetime/manual/head-all.html">Head All</a><a href="/spacetime/manual/midi.html">MIDI</a><a href="/spacetime/manual/glue-left.html">Glue Left</a><a href="/spacetime/manual/glue-right.html">Glue Right</a></nav>
+    <nav class="manual-nav" aria-label="SpaceTime manual"><h2>SpaceTime manual</h2><a href="/spacetime/manual/">Overview</a><a href="/spacetime/manual/program.html" aria-current="page">Program</a><a href="/spacetime/manual/stage4.html">Stage4</a><a href="/spacetime/manual/stage-time.html">Stage Time</a><a href="/spacetime/manual/head.html">Head</a><a href="/spacetime/manual/head-all.html">Head All</a><a href="/spacetime/manual/midi.html">MIDI</a><a href="/spacetime/manual/glue-left.html">Glue Left</a><a href="/spacetime/manual/glue-right.html">Glue Right</a></nav>
     <article class="manual-article">
       <img class="manual-shot" src="/assets/modules/program-light.png?v=20260821-1" alt="SpaceTime Program module with light panel">
       <p class="eyebrow">18 HP programming anchor</p>
@@ -61,7 +61,8 @@
 
       <h2>Interval time and pulses</h2>
       <p>Choose one of four ranges per stage: 0.002–0.03 s, 0.02–0.3 s, 0.2–3 s, or 2–30 s. Time Source selects the Stage4 time slider or one of external inputs A–D; in external mode the time slider chooses the input quartile.</p>
-      <p>Pulse 1 and Pulse 2 flag the selected stage for the corresponding Head outputs. Pulse Retrig defaults on, inserting a brief low notch between adjacent flagged stages. Turn it off to merge adjacent stages into one gate.</p>
+      <p>Pulse 1 and Pulse 2 flag the selected stage for the corresponding Head outputs. Pulse Retrig inserts a low notch between adjacent flagged stages. Its Time control sets the notch and the high-pulse lengths of ALL and EOC together, from 0.1 ms to 15 ms, with 1 ms at midpoint. Turn retrigger off to merge adjacent Pulse 1/2 stages into one gate.</p>
+      <p>The Stage Time companion sets the Program-selected stage to FREE or SYNC. In SYNC, its Stage4 time slider selects one of nine note divisions from 1/64 to 4/1. The selected Head supplies the clock source; its Div / Mult selects the base rate. With an Internal clock, the slider-derived free interval is scaled by the selected division.</p>
 
       <h2>Presets, key, and scale</h2>
       <p>For presets, press Load or Save and then 1–12. Presets store stage programming and slider values in the patch. Recalled slider values use takeover: a physical slider does not regain control until it crosses the stored value.</p>

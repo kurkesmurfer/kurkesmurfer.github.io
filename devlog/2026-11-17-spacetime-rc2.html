@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SpaceTime 2.0.0-rc.2 — Kurkesmurfer devlog</title>
+  <meta name="description" content="SpaceTime's latest provisional VCV Rack build adds per-stage note-division timing, configurable MIDI routing, and a 12 HP Head panel.">
+  <link rel="icon" href="/assets/kurkesmurfer-logo.svg?v=20260821-1" type="image/svg+xml">
+  <script src="/assets/site-theme.js?v=20260821-1"></script>
+  <link rel="stylesheet" href="/assets/site.css?v=20260821-1">
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand-link" href="/"><img src="/assets/kurkesmurfer-logo.svg?v=20260821-1" alt=""><span>Kurkesmurfer</span></a>
+<nav class="site-nav" aria-label="Primary navigation">
+  <a class="nav-home" href="/">Collection</a>
+  <details class="plugin-menu"><summary>Plugins</summary><div class="plugin-menu-list">
+    <a href="/spacetime/">SpaceTime</a><a href="/homodyne/">Homodyne</a><a href="/muse/">Muse</a><a href="/inflection/">Inflection</a><a href="/multiphaser/">MultiPhaser</a>
+  </div></details>
+  <a class="nav-manuals" href="/manuals/">Manuals</a><a class="nav-metamodule" href="/metamodule/">MetaModule</a><a class="nav-devlog" href="/devlog/" aria-current="page">Devlog</a>
+</nav>
+  </div></header>
+  <main class="article-layout"><article>
+    <header class="article-header">
+      <p class="entry-meta"><time datetime="2026-11-17">17 November 2026</time> · SpaceTime</p>
+      <h1>SpaceTime 2.0.0-rc.2</h1>
+    </header>
+    <div class="article-body">
+      <p class="intro">The new provisional VCV Rack build is available for Apple Silicon macOS, Intel macOS, Windows x64, and Linux x64.</p>
+      <h2>What's in this build</h2>
+      <ul>
+        <li>Stage Time sets FREE or SYNC for the Program-selected stage. SYNC uses the Stage4 time slider to choose a note division from 1/64 to 4/1.</li>
+        <li>Head Div / Mult sets the base clock rate, and the new Head Time Mult knob continuously scales each resulting interval.</li>
+        <li>Program Pulse Time sets the low retrigger notch and the high pulse durations of ALL and EOC.</li>
+        <li>The MIDI module supports configurable Program, Stage, and contiguous Head input channels. Each Head's MIDI output lane has its own channel setting.</li>
+        <li>The production Head panel is now 12 HP. The 8 HP and 10 HP panels remain design references.</li>
+      </ul>
+      <h2>Platform testing</h2>
+      <p>All four packages were cross-compiled with the VCV Rack Plugin Toolchain. Apple Silicon has passed a Rack smoke test. Native Rack tests on Intel macOS, Windows, and Linux remain to be completed.</p>
+      <p>The current host-side check also needs its MIDI feedback test expectations updated for the configurable channels and feedback map.</p>
+      <div class="callout"><strong>Test build:</strong> back up important patches before use. This prerelease is not a final release.</div>
+      <div class="action-row"><a class="button" href="https://github.com/kurkesmurfer/SpaceTime/releases/tag/v2.0.0-rc.2">Download 2.0.0-rc.2</a><a class="button secondary" href="/spacetime/manual/">SpaceTime manual</a></div>
+    </div>
+  </article></main>
+  <footer class="site-footer"><div class="footer-inner"><a href="/devlog/">Development log</a><a href="https://github.com/kurkesmurfer/SpaceTime">SpaceTime on GitHub</a></div></footer>
+</body>
+</html>

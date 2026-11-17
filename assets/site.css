@@ -599,6 +599,35 @@ a:hover {
   background: var(--surface-module);
 }
 
+.module-preview-stage-time > div {
+  width: 76px;
+  height: 248px;
+  margin-bottom: 14px;
+  border: 1px solid #8f887e;
+  border-radius: 6px;
+  background: #e9e5df;
+  color: #403b35;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+.module-preview-stage-time b {
+  width: 24px;
+  height: 84px;
+  border: 2px solid #766e65;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #211d19 0 30%, #584a40 30% 70%, #211d19 70%);
+  color: #b7afa5;
+  display: grid;
+  place-items: center;
+  font-size: 23px;
+}
+
 .module-card img {
   width: auto;
   height: 280px;

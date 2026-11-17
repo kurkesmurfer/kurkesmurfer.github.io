@@ -37,6 +37,7 @@
       <a href="/spacetime/manual/" aria-current="page">Overview</a>
       <a href="/spacetime/manual/program.html">Program</a>
       <a href="/spacetime/manual/stage4.html">Stage4</a>
+      <a href="/spacetime/manual/stage-time.html">Stage Time</a>
       <a href="/spacetime/manual/head.html">Head</a>
       <a href="/spacetime/manual/head-all.html">Head All</a>
       <a href="/spacetime/manual/midi.html">MIDI</a>
@@ -48,11 +49,12 @@
       <h1>SpaceTime</h1>
       <p class="intro">A multi-playhead arbitrary function generator for VCV Rack 2, built as a family of contiguous modules.</p>
 
-      <div class="callout"><strong>Release candidate:</strong> preview builds may contain defects, including crashes or loss of unsaved patch state. Back up important patches. Installation packages, source code, and issue reporting are available from the <a href="https://github.com/kurkesmurfer/SpaceTime">public GitHub repository</a>.</div>
+      <div class="callout"><strong>SpaceTime 2.0.0-rc.2:</strong> this provisional build may contain defects, including crashes or loss of unsaved patch state. Back up important patches. Download platform packages from the <a href="https://github.com/kurkesmurfer/SpaceTime/releases/tag/v2.0.0-rc.2">GitHub prerelease</a>; report reproducible problems through <a href="https://github.com/kurkesmurfer/SpaceTime/issues">GitHub Issues</a>.</div>
 
       <h2>Placement</h2>
       <p>Build the chain from left to right. Heads sit to the left of Program, Stage4 blocks sit to its right, and the optional MIDI module sits directly left of Program. Optional Head All is the far-left terminal. Head 1 is nearest Program; stage 1 is the first slider on the leftmost Stage4.</p>
       <div class="architecture"><span>Head All (optional)</span><b>→</b><span>Head ×1–8</span><b>→</b><span>MIDI</span><b>→</b><span>Program</span><b>→</b><span>Stage4 ×1–16</span></div>
+      <p>Stage Time is a timing sidecar. Place it beside Program to follow that instance's selected stage and instrument ID.</p>
       <p>A gap or foreign module ends the normal expander chain. A matched Glue Right/Glue Left pair can transport one SpaceTime chain fragment across a gap.</p>
 
       <h2>First patch</h2>
@@ -69,6 +71,8 @@
       <p>Every Stage4 stores its own sliders and stage flags. Reordering blocks reorders the sequence without separating values from their programming.</p>
       <h3>Heads are independent</h3>
       <p>Every Head has its own transport, direction, region, clock source, timing scale, and output set while reading the same stage field.</p>
+      <h3>Stage timing can follow note divisions</h3>
+      <p>Stage Time applies FREE or SYNC to the Program-selected stage. In SYNC, its Stage4 time slider selects a note division, interpreted using the active Head's clock source and Div / Mult setting.</p>
       <h3>Selection edits one stage</h3>
       <p>Program's Select control chooses the edit target. Holding Select while applying a modifier edits every stage. The Program context menu also offers a one-shot “Apply next edit to ALL stages” command.</p>
       <h3>First and Last define regions</h3>
@@ -79,6 +83,7 @@
       <div class="action-row">
         <a class="button secondary" href="/spacetime/manual/program.html">Program</a>
         <a class="button secondary" href="/spacetime/manual/stage4.html">Stage4</a>
+        <a class="button secondary" href="/spacetime/manual/stage-time.html">Stage Time</a>
         <a class="button secondary" href="/spacetime/manual/head.html">Head</a>
         <a class="button secondary" href="/spacetime/manual/head-all.html">Head All</a>
         <a class="button secondary" href="/spacetime/manual/midi.html">MIDI</a>

@@ -27,7 +27,7 @@
   <a class="nav-devlog" href="/devlog/">Devlog</a>
 </nav></div></header>
   <main class="manual-layout">
-    <nav class="manual-nav" aria-label="SpaceTime manual"><h2>SpaceTime manual</h2><a href="/spacetime/manual/">Overview</a><a href="/spacetime/manual/program.html">Program</a><a href="/spacetime/manual/stage4.html">Stage4</a><a href="/spacetime/manual/head.html">Head</a><a href="/spacetime/manual/head-all.html">Head All</a><a href="/spacetime/manual/midi.html" aria-current="page">MIDI</a><a href="/spacetime/manual/glue-left.html">Glue Left</a><a href="/spacetime/manual/glue-right.html">Glue Right</a></nav>
+    <nav class="manual-nav" aria-label="SpaceTime manual"><h2>SpaceTime manual</h2><a href="/spacetime/manual/">Overview</a><a href="/spacetime/manual/program.html">Program</a><a href="/spacetime/manual/stage4.html">Stage4</a><a href="/spacetime/manual/stage-time.html">Stage Time</a><a href="/spacetime/manual/head.html">Head</a><a href="/spacetime/manual/head-all.html">Head All</a><a href="/spacetime/manual/midi.html" aria-current="page">MIDI</a><a href="/spacetime/manual/glue-left.html">Glue Left</a><a href="/spacetime/manual/glue-right.html">Glue Right</a></nav>
     <article class="manual-article">
       <img class="manual-shot" src="/assets/modules/midi-light.png?v=20260821-1" alt="SpaceTime MIDI module with light panel">
       <p class="eyebrow">4 HP controller and instrument gateway</p>
@@ -40,14 +40,15 @@
       <h2>Device and channels</h2>
       <table><thead><tr><th>Traffic</th><th>Channel</th></tr></thead><tbody>
         <tr><td>Program controls and presets</td><td>Channel 16 by default; configurable 1–16 in the context menu.</td></tr>
-        <tr><td>Stage sliders</td><td>Channel 15 by default; configurable 1–16. It must differ from the Program channel.</td></tr>
-        <tr><td>Head 1–8 controls</td><td>Fixed channels 1–8 respectively.</td></tr>
-        <tr><td>Head All controls</td><td>Fixed channel 9; CC 0–12 broadcast to all Heads.</td></tr>
+        <tr><td>Stage sliders</td><td>Channel 15 by default; configurable 1–16. It must differ from Program and active Head channels.</td></tr>
+        <tr><td>Head 1–8 controls</td><td>Configurable contiguous range; defaults to channels 1–8. Set the start channel in the MIDI context menu.</td></tr>
+        <tr><td>Head All controls</td><td>Program channel CC 32–44 broadcasts Head CC 0–12 to every Head.</td></tr>
         <tr><td>Clock and transport</td><td>MIDI System Realtime; channel-independent.</td></tr>
-        <tr><td>Head output lanes</td><td>Independently selectable channels 1–16.</td></tr>
+        <tr><td>Head output lanes</td><td>Each Head's output channel is independently selectable from 1–16.</td></tr>
+        <tr><td>Controller feedback</td><td>Separate MIDI output; replies follow the configured Program, Stage, and Head channels.</td></tr>
       </tbody></table>
-      <p>Channel 9 reuses CC 0–12 as HEAD ALL commands. CC 13 is ignored on that channel because Display ownership remains exclusive to one Head. Channels 10–14 remain free under the default allocation.</p>
-      <p>The Rack MIDI input is forced to All channels so SpaceTime can route Program, stage, and head traffic itself. The panel readout prefixes the current channels with <strong>P</strong> and <strong>S</strong>.</p>
+      <p>By default, channels 1–8 carry Head controls, channel 15 carries Stage sliders, and channel 16 carries Program commands. Channels 9–14 are free. Program may share a channel with one of its Heads because their CC ranges differ. The Stage channel cannot overlap Program or any active Head. The Head-start setting is limited so the active range never wraps past channel 16.</p>
+      <p>The MIDI module context menu sets the Program channel, Stage channel, contiguous Head channel start, and each Head's output lane. The <strong>HEAD N output</strong> submenu selects its mode, channel, note gate source, and CC number. The Rack MIDI input is forced to All channels. The panel readout shows the Program, Head-start, and Stage channels.</p>
 
       <h2>Stage sliders</h2>
       <table><thead><tr><th>CC range</th><th>Target</th></tr></thead><tbody>
@@ -68,6 +69,8 @@
         <tr><td>89</td><td>Key C through B.</td></tr>
         <tr><td>90</td><td>Major, Minor, or Chromatic scale.</td></tr>
         <tr><td>91</td><td>Pulse Retrig off / on.</td></tr>
+        <tr><td>92</td><td>Hold Select: 64–127 holds; 0–63 releases. Modifier presses apply to all stages while held.</td></tr>
+        <tr><td>93</td><td>Pulse/retrigger duration, 0.1–15 ms; 1 ms at midpoint.</td></tr>
       </tbody></table>
       <p>Program Change 1–12 recalls preset slots 1–12 on the Program-controls channel.</p>
 
@@ -84,14 +87,18 @@
         <tr><td>11</td><td>Time CV amount.</td></tr>
         <tr><td>12</td><td>One-shot / First–Last / full-chain loop mode.</td></tr>
         <tr><td>13</td><td>Display latch.</td></tr>
+        <tr><td>18</td><td>Continuous time multiplier, ×0.5 to ×4; midpoint is ×1.</td></tr>
       </tbody></table>
 
       <h2>Realtime clock and transport</h2>
       <p>F8 supplies MIDI Clock to heads whose clock source is MIDI. FA Start, FB Continue, and FC Stop affect only heads with <strong>Follow MIDI transport</strong> enabled.</p>
       <div class="callout">The current implementation advances from individual F8 edges through the Head Div/Mult setting. A separate musical 24 PPQN interpretation layer is not part of version 2.0.0.</div>
 
+      <h2>Controller feedback</h2>
+      <p>Select a separate feedback output in the MIDI module context menu. It is Off by default. Snapshot requests use the configured Program channel: CC 50 requests a Head (value 0–7) or all Heads (8); CC 51 requests Program; CC 52 requests a Stage page (0–7); and CC 53 probes the protocol version. Replies use the configured Head, Stage, and Program channels. CC 117 returns the development version byte; CC 118/119 frame explicit snapshots. Program state uses feedback CC 94–113, and stage slider values use CC 0–127 on the configured Stage channel.</p>
+
       <h2>Per-head output</h2>
-      <p>Configure each of eight lanes from <strong>HEAD n output</strong> in the context menu.</p>
+      <p>Configure each of eight lanes from the MIDI module's <strong>HEAD N output</strong> submenu.</p>
       <table><thead><tr><th>Mode</th><th>Behavior</th></tr></thead><tbody>
         <tr><td>Off</td><td>No output; any active note is released.</td></tr>
         <tr><td>Notes</td><td>Quantized Head CV becomes MIDI note number with 0 V = note 60. Gate source is Pulse 1, Pulse 2, or All.</td></tr>
